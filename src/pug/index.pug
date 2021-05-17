@@ -1,0 +1,330 @@
+extends _layout
+
+block vars
+	- var pageTitle = "Home page";
+	- var pageClass = "homepage";
+	- var pageActive = "homepage";
+
+block content
+	div.main-wrap
+		.section-name
+			.container-fluid.container
+				.section-name__inner
+					.section-name__content
+						.section-name__text
+							.section-name__text--black
+								p.site-title__large Айдер
+								p.site-title__large.move-right Муждабаєв
+							.section-name__text--white
+								p.site-title__large-140 Журналіст
+						.section-name__content-image
+							picture
+								source(srcset="img/image/homepage/amam-1.webp" type="image/webp")
+								img(src="img/image/homepage/amam-1.png" alt="img").lazyload
+
+		.section-main-articles
+			.container-fluid.container
+				.section-main-articles__content.row
+					.section-main-articles__article.col
+						.section-main-articles__article-content
+							.section-main-articles__article-title
+								h2.article-title.article-title--red TOP відео
+							.section-main-articles__article-image
+								picture
+									source(srcset="img/image/homepage/homepage-1.webp" type="image/webp")
+									img(src="img/image/homepage/homepage-1.png" alt="img").lazyload
+							.section-main-articles__article-date
+								p.article-date 14.10.2010
+							.section-main-articles__article-description
+								h2.site-text__large Не будем оценивать военную реалистичность этого "блицкрига", обсудим то, что за его угрозой стоит.
+
+					.section-main-articles__article.col
+						.section-main-articles__article-content
+							.section-main-articles__article-title
+								h2.article-title.article-title--red TOP стаття
+							.section-main-articles__article-date
+								p.article-date 14.10.2010
+							.section-main-articles__article-description
+								h2.site-text__large Сегодня в Киеве прошла очередная пресс-конференция президента Украины Владимира Зеленского.
+
+							.section-main-articles__article-info
+								p.site-text__medium Я не буду подробно анализировать ее содержание, поскольку главного вопроса о противостоянии с Россией никто из журналистов президенту так и не задал. А касаться этот вопрос.Не будем оценивать военную реалистичность этого "блицкрига".
+
+					.section-main-articles__article.col
+						.section-main-articles__article-content
+							.section-main-articles__article-title
+								h2.article-title.article-title--red TOP фото
+							.section-main-articles__article-image
+								picture
+									source(srcset="img/image/homepage/homepage-3.webp" type="image/webp")
+									img(src="img/image/homepage/homepage-3.png" alt="img").lazyload
+							.section-main-articles__article-date
+								p.article-date 14.10.2010
+							.section-main-articles__article-description
+								h2.site-text__large Не будем оценивать военную обсудим то, что за его угрозой стоит.
+
+
+				.section-main-articles__content.row.hidden-680
+					.section-main-articles__article.col
+						.section-main-articles__article-content
+							.section-main-articles__article-title
+								h2.article-title.article-title--black останнє відео
+							.section-main-articles__article-title.mobile-title
+								h2.article-title.article-title--black Все відео
+							.section-main-articles__article-image
+								picture
+									source(srcset="img/image/homepage/homepage-4.webp" type="image/webp")
+									img(src="img/image/homepage/homepage-4.png" alt="img").lazyload
+							.section-main-articles__article-date
+								p.article-date 14.10.2010
+							.section-main-articles__article-description
+								h2.site-text__large Не будем оценивать военную реалистичность этого "блицкрига", обсудим то, что за его угрозой стоит.
+
+					.section-main-articles__article.col
+						.section-main-articles__article-content
+							.section-main-articles__article-title
+								h2.article-title.article-title--black остання стаття
+							.section-main-articles__article-title.mobile-title
+								h2.article-title.article-title--black Все відео
+							.section-main-articles__article-date
+								p.article-date 14.10.2010
+							.section-main-articles__article-description
+								h2.site-text__large Сегодня в Киеве прошла очередная пресс-конференция президента Украины Владимира Зеленского.
+
+							.section-main-articles__article-info
+								p.site-text__medium Я не буду подробно анализировать ее содержание, поскольку главного вопроса о противостоянии с Россией никто из журналистов президенту так и не задал. А касаться этот вопрос.Не будем оценивать военную реалистичность этого "блицкрига".
+
+					.section-main-articles__article.col.hidden-680
+						.section-main-articles__article-content
+							.section-main-articles__article-title
+								h2.article-title.article-title--black останнє фото
+							.section-main-articles__article-title.mobile-title
+								h2.article-title.article-title--black Все відео
+							.section-main-articles__article-image
+								picture
+									source(srcset="img/image/homepage/homepage-5.webp" type="image/webp")
+									img(src="img/image/homepage/homepage-5.png" alt="img").lazyload
+							.section-main-articles__article-date
+								p.article-date 14.10.2010
+							.section-main-articles__article-description
+								h2.site-text__large Не будем оценивать военную реалистичность этого "блицкрига", обсудим то, что за его угрозой стоит.
+
+
+				.section-main-articles__content.row.hidden-680
+
+					.section-main-articles__article.col
+						.section-main-articles__article-content
+							.section-main-articles__article-image
+								picture
+									source(srcset="img/image/homepage/homepage-2.webp" type="image/webp")
+									img(src="img/image/homepage/homepage-2.png" alt="img").lazyload
+							.section-main-articles__article-date
+								p.article-date 14.10.2010
+							.section-main-articles__article-description
+								h2.site-text__large Не будем оценивать военную реалистичность этого "блицкрига", обсудим то, что за его угрозой стоит.
+
+					.section-main-articles__article.col
+						.section-main-articles__article-content
+							.section-main-articles__article-date
+								p.article-date 14.10.2010
+							.section-main-articles__article-description
+								h2.site-text__large Сегодня в Киеве прошла очередная пресс-конференция президента Украины Владимира Зеленского.
+							.section-main-articles__article-info
+								p.site-text__medium Я не буду подробно анализировать ее содержание, поскольку главного вопроса о противостоянии с Россией никто из журналистов президенту так и не задал. А касаться этот вопрос.Не будем оценивать военную реалистичность этого "блицкрига".
+
+					.section-main-articles__article.col
+						.section-main-articles__article-content
+							.section-main-articles__article-image
+								picture
+									source(srcset="img/image/homepage/homepage-6.webp" type="image/webp")
+									img(src="img/image/homepage/homepage-6.png" alt="img").lazyload
+							.section-main-articles__article-date
+								p.article-date 14.10.2010
+							.section-main-articles__article-description
+								h2.site-text__large Не будем оценивать военную реалистичность этого "блицкрига", обсудим то, что за его угрозой стоит.
+
+				.section-main-articles__content.row.hidden-680
+					.section-main-articles__article.col
+						.section-main-articles__article-content
+							.section-main-articles__article-title
+								h2.article-title.article-title--black більше відео
+
+					.section-main-articles__article.col
+						.section-main-articles__article-content
+							.section-main-articles__article-title
+								h2.article-title.article-title--black більше статті
+
+					.section-main-articles__article.col
+						.section-main-articles__article-content
+							.section-main-articles__article-title
+								h2.article-title.article-title--black більше фото
+
+
+
+				.section-main-articles__content.row.visible-680
+					.section-main-articles__article.col
+						.section-main-articles__article-slider
+							.section-main-articles__article-title.mobile-title
+								h2.article-title.article-title--black Все відео
+							.section-main-articles__article-slider-container
+								.section-main-articles__article-slider-container.swiper-container
+									.swiper-wrapper
+										.swiper-slide
+											.section-main-articles__article-content
+												.section-main-articles__article-image
+													picture
+														source(srcset="img/image/homepage/homepage-mobile-1.webp" type="image/webp")
+														img(src="img/image/homepage/homepage-mobile-1.png" alt="img").lazyload
+												.section-main-articles__article-date
+													p.article-date 14.10.2010
+												.section-main-articles__article-description
+													h2.site-text__large Не будем оценивать военную реалистичность этого "блицкрига", обсудим то, что за его угрозой стоит.
+												.section-main-articles__article-info
+													p.site-text__medium Я не буду подробно анализировать ее содержание, поскольку главного вопроса о противостоянии с Россией никто из журналистов президенту так и не задал. А касаться этот вопрос.Не будем оценивать военную реалистичность этого "блицкрига".
+
+
+										.swiper-slide
+											.section-main-articles__article-content
+												.section-main-articles__article-image
+													picture
+														source(srcset="img/image/homepage/homepage-mobile-2.webp" type="image/webp")
+														img(src="img/image/homepage/homepage-mobile-2.png" alt="img").lazyload
+												.section-main-articles__article-date
+													p.article-date 14.10.2010
+												.section-main-articles__article-description
+													h2.site-text__large Не будем оценивать военную реалистичность этого "блицкрига", обсудим то, что за его угрозой стоит.
+												.section-main-articles__article-info
+													p.site-text__medium Я не буду подробно анализировать ее содержание, поскольку главного вопроса о противостоянии с Россией никто из журналистов президенту так и не задал. А касаться этот вопрос.Не будем оценивать военную реалистичность этого "блицкрига".
+
+
+										.swiper-slide
+											.section-main-articles__article-content
+												.section-main-articles__article-image
+													picture
+														source(srcset="img/image/homepage/homepage-2.webp" type="image/webp")
+														img(src="img/image/homepage/homepage-mobile-2.png" alt="img").lazyload
+												.section-main-articles__article-date
+													p.article-date 14.10.2010
+												.section-main-articles__article-description
+													h2.site-text__large Не будем оценивать военную реалистичность этого "блицкрига", обсудим то, что за его угрозой стоит.
+												.section-main-articles__article-info
+													p.site-text__medium Я не буду подробно анализировать ее содержание, поскольку главного вопроса о противостоянии с Россией никто из журналистов президенту так и не задал. А касаться этот вопрос.Не будем оценивать военную реалистичность этого "блицкрига".
+									.swiper-pagination
+
+
+
+				.section-main-articles__content.row.visible-680
+					.section-main-articles__article.col
+						.section-main-articles__article-slider
+							.section-main-articles__article-title.mobile-title
+								h2.article-title.article-title--black Всі статті
+							.section-main-articles__article-slider-container
+								.section-main-articles__article-slider-container.swiper-container
+									.swiper-wrapper
+										.swiper-slide
+											.section-main-articles__article-content
+												.section-main-articles__article-date
+													p.article-date 14.10.2010
+												.section-main-articles__article-description
+													h2.site-text__large Сегодня в Киеве прошла очередная пресс-конференция президента.
+												.section-main-articles__article-info
+													p.site-text__medium Я не буду подробно анализировать ее содержание, поскольку главного вопроса о противостоянии с Россией никто из журналистов президенту так и не задал. А касаться этот вопрос.
+													| Поэтому сегодня на пресс-конференции президента представитель телеканализации под названием "НАШ" публично протранслировал Владимиру Зеленскому ложь о том, что якобы Ленур Ислямов – гражданин России.
+
+
+										.swiper-slide
+											.section-main-articles__article-content
+												.section-main-articles__article-date
+													p.article-date 14.10.2010
+												.section-main-articles__article-description
+													h2.site-text__large Сегодня в Киеве прошла очередная пресс-конференция президента."блицкрига", обсудим то, что за его угрозой стоит.
+												.section-main-articles__article-info
+													p.site-text__medium Я не буду подробно анализировать ее содержание, поскольку главного вопроса о противостоянии с Россией никто из журналистов президенту так и не задал. А касаться этот вопрос.
+													| Поэтому сегодня на пресс-конференции президента представитель телеканализации под названием "НАШ" публично протранслировал Владимиру Зеленскому ложь о том, что якобы Ленур Ислямов – гражданин России.
+
+
+										.swiper-slide
+											.section-main-articles__article-content
+												.section-main-articles__article-date
+													p.article-date 14.10.2010
+												.section-main-articles__article-description
+													h2.site-text__large Не будем оценивать военную реалистичность.
+												.section-main-articles__article-info
+													p.site-text__medium Я не буду подробно анализировать ее содержание, поскольку главного вопроса о противостоянии с Россией никто из журналистов президенту так и не задал. А касаться этот вопрос.
+													| Поэтому сегодня на пресс-конференции президента представитель телеканализации под названием "НАШ" публично протранслировал Владимиру Зеленскому ложь о том, что якобы Ленур Ислямов – гражданин России.
+									.swiper-pagination
+
+
+
+				.section-main-articles__content.row.visible-680
+					.section-main-articles__article.col
+						.section-main-articles__article-slider
+							.section-main-articles__article-title.mobile-title
+								h2.article-title.article-title--black Всі фото
+							.section-main-articles__article-slider-container
+								.section-main-articles__article-slider-container.swiper-container
+									.swiper-wrapper
+										.swiper-slide
+											.section-main-articles__article-content
+												.section-main-articles__article-image
+													picture
+														source(srcset="img/image/homepage/homepage-mobile-3.webp" type="image/webp")
+														img(src="img/image/homepage/homepage-mobile-3.png" alt="img").lazyload
+												.section-main-articles__article-date
+													p.article-date 14.10.2010
+												.section-main-articles__article-description
+													h2.site-text__large Не будем оценивать военную реалистичность этого "блицкрига", обсудим то, что за его угрозой стоит.
+												.section-main-articles__article-info
+													p.site-text__medium Я не буду подробно анализировать ее содержание, поскольку главного вопроса о противостоянии с Россией никто из журналистов президенту так и не задал.
+
+
+
+										.swiper-slide
+											.section-main-articles__article-content
+												.section-main-articles__article-image
+													picture
+														source(srcset="img/image/homepage/homepage-mobile-4.webp" type="image/webp")
+														img(src="img/image/homepage/homepage-mobile-4.png" alt="img").lazyload
+												.section-main-articles__article-date
+													p.article-date 14.10.2010
+												.section-main-articles__article-description
+													h2.site-text__large Не будем оценивать военную реалистичность этого "блицкрига", обсудим то, что за его угрозой стоит.
+												.section-main-articles__article-info
+													p.site-text__medium Я не буду подробно анализировать ее содержание, поскольку главного вопроса о противостоянии с Россией никто из журналистов президенту так и не задал. А касаться этот вопрос.Не будем оценивать военную реалистичность этого "блицкрига".
+
+
+										.swiper-slide
+											.section-main-articles__article-content
+												.section-main-articles__article-image
+													picture
+														source(srcset="img/image/homepage/homepage-mobile-5.webp" type="image/webp")
+														img(src="img/image/homepage/homepage-mobile-5.png" alt="img").lazyload
+												.section-main-articles__article-date
+													p.article-date 14.10.2010
+												.section-main-articles__article-description
+													h2.site-text__large Не будем оценивать военную реалистичность этого "блицкрига", обсудим то, что за его угрозой стоит.
+												.section-main-articles__article-info
+													p.site-text__medium Я не буду подробно анализировать ее содержание, поскольку главного вопроса о противостоянии с Россией никто из журналистов президенту так и не задал. А касаться этот вопрос.Не будем оценивать военную реалистичность этого "блицкрига".
+									.swiper-pagination
+
+
+
+		.section-news-mailing
+			.container-fluid.container
+				.section-news-mailing__content.row.desktop-content
+					.section-news-mailing__text.col
+							h2.site-title__medium-64  Новостная рассылка
+					.section-news-mailing__form.col
+						.section-news-mailing__form-input
+							input(type='email')
+						.section-news-mailing__form-submit
+							button(type='submit' value='Надіслати')
+
+				.section-news-mailing__content.row.mobile-content
+					.section-news-mailing__text.col
+							h2.site-title__medium-64  Новостная рассылка
+					.section-news-mailing__form.col
+						.section-news-mailing__form-input
+							input(type='email')
+						.section-news-mailing__form-submit
+							button(type='submit' value='Надіслати')
