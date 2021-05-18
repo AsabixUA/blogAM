@@ -4,7 +4,7 @@ window.onload = function () {
 
 	let btnMenuOpen = document.querySelector('.menu-open');
 	let btnMenuClose = document.querySelector('.close-menu-btn');
-  let mobileMenu = document.querySelector('.mobile-menu');
+	let mobileMenu = document.querySelector('.mobile-menu');
 
 	btnMenuOpen.onclick = () => {
 		mobileMenu.classList.toggle('_active');
@@ -15,6 +15,26 @@ window.onload = function () {
 	}
 
 	// menu mobile end
+
+	// video filter input start
+
+	let filterYearsOpenBtn = document.querySelector('.js_filter_years_btn')
+	let filterYearsItemList = document.querySelector('.js_filter_years_list')
+
+	filterYearsOpenBtn.onclick = function () {
+		this.classList.toggle('_active')
+		filterYearsItemList.classList.toggle('_active');
+	}
+
+	let filterTagsOpenBtn = document.querySelector('.js_filter_tags_btn')
+	let filterTagsItemList = document.querySelector('.js_filter_tags_list')
+
+	filterTagsOpenBtn.onclick = function () {
+		this.classList.toggle('_active')
+		filterTagsItemList.classList.toggle('_active');
+	}
+
+	// video filter input end
 
 
 	//slider main page start
@@ -43,7 +63,6 @@ window.onload = function () {
 		this.nextElementSibling.classList.toggle('_active');
 		console.log(this)
 	}
-
 
 
 	// footer end
