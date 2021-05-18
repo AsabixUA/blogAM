@@ -288,6 +288,7 @@ body .mb-12px {
 
 		}
 	}
+
 	&__medium-64 {
 		font-size: 64px;
 		line-height: 96px;
@@ -303,35 +304,12 @@ body .mb-12px {
 
 		}
 	}
-
-	&__bold {
-
-		@include for-800 {
-
-		}
-	}
-
-	&__semi-bold {
-
-		@include for-800 {
-
-		}
-	}
-
-	&__medium {
-
-		@include for-800 {
-
-		}
-	}
-
-	&__regular {
-
-		@include for-800 {
-
-		}
+	&__small-18 {
+		font-size: 18px;
+		line-height: 23px;
 	}
 }
+
 
 .article-title {
 	font-family: 'FiraSansExtraCondensed-Bold';
