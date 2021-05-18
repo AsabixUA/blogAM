@@ -138,6 +138,11 @@ body .mb-16px {
 body .mb-12px {
 	margin-bottom: 12px;
 }
+body.disable-scroll{
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+}
 
 .correct input,
 .correct textarea {
@@ -338,9 +343,16 @@ body .mb-12px {
 	font-weight: 400;
 	font-size: 21px;
 	line-height: 31px;
-
 }
 
+.video-link{
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
 .site-text {
 	&__large {
 		font-family: 'FiraSansExtraCondensed-SemiBold';

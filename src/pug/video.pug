@@ -7,7 +7,6 @@ block vars
 
 block content
 	div.main-wrap
-		h1 titlegit status
 	.section-videos
 		.current-page.mobile-current-page
 			a(href='#') Відео
@@ -20,8 +19,8 @@ block content
 								input(type='text' placeholder='Рік')
 								.section-videos__filter-ico.js_filter_years_btn
 									include ../img/ico/arrow-down-thin-ico.svg
-							.section-videos__filter-list-wrapper
-								ul.section-videos__filter-list.js_filter_years_list
+							.section-videos__filter-list-wrapper.js_filter_years_list
+								ul.section-videos__filter-list
 									li.section-videos__filter-item
 										label
 											input(type="checkbox")
@@ -60,8 +59,8 @@ block content
 								input(type='text' placeholder='Теги')
 								.section-videos__filter-ico.js_filter_tags_btn
 									include ../img/ico/arrow-down-thin-ico.svg
-							.section-videos__filter-list-wrapper
-								ul.section-videos__filter-list.js_filter_tags_list
+							.section-videos__filter-list-wrapper.js_filter_tags_list
+								ul.section-videos__filter-list
 									li.section-videos__filter-item
 										label
 											input(type="checkbox")
@@ -90,6 +89,106 @@ block content
 										button(type='submit') видалити
 											span.section-videos__filter-counter (1)
 
+				// filter mobile start
+
+				.section__filter-wrapper--mobile
+					.section__filter-close--mobile.close-filter-btn
+						include ../img/ico/close-ico--white.svg
+					.section__filters--mobile
+						.section__filter--mobile
+							.section__filter-item--mobile.js_filter_tags_btn_mobile
+								.section__filter-item-text--mobile
+									| теги
+								.section__filter-item-open--mobile._active.js_filter_plus--tags
+									include ../img/ico/plus-ico.svg
+								.section__filter-item-close--mobile.js_filter_minus--tags
+									include ../img/ico/minus-ico.svg
+							.section__filter-list-wrapper--mobile.js_filter_tags_list_mobile
+								ul.section-videos__filter-list--mobile
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label COVID
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Політика
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Крим
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Пандемія
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Україна
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Україна
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Україна
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Україна
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Україна
+
+
+						.section__filter--mobile
+							.section__filter-item--mobile.js_filter_years_btn_mobile
+								.section__filter-item-text--mobile
+									| рік
+								.section__filter-item-open--mobile._active.js_filter_plus--years
+									include ../img/ico/plus-ico.svg
+								.section__filter-item-close--mobile.js_filter_minus--years
+									include ../img/ico/minus-ico.svg
+							.section__filter-list-wrapper--mobile.js_filter_years_list_mobile
+								ul.section-videos__filter-list--mobile
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label COVID
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Політика
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Крим
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Пандемія
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Україна
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Україна
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Україна
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Україна
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Україна
 
 
 
@@ -97,6 +196,64 @@ block content
 
 
 
+						.section__filter--mobile
+							.section__filter-item--mobile.js_filter_types_btn_mobile
+								.section__filter-item-text--mobile
+									| типу
+								.section__filter-item-open--mobile._active.js_filter_plus--types
+									include ../img/ico/plus-ico.svg
+								.section__filter-item-close--mobile.js_filter_minus--types
+									include ../img/ico/minus-ico.svg
+							.section__filter-list-wrapper--mobile.js_filter_types_list_mobile
+								ul.section-videos__filter-list--mobile
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label COVID
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Політика
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Крим
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Пандемія
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Україна
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Україна
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Україна
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Україна
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Україна
+
+
+
+
+
+					.section__filter-btn--mobile
+						.section__filet-cansel-btn--mobile
+							button(type='submit') скасувати фільтри
+						.section__filet-submit-btn--mobile
+							button(type='submit') застосувати
+
+				// filter mobile end
 
 
 				.section-videos__content.row
