@@ -1,0 +1,53 @@
+//include _mixins
+
+block vars
+  - var cacheFix = parseInt(Math.random()*1000)
+
+doctype html
+html(lang="uk")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name="viewport" content="initial-scale=1.0, width=device-width")
+    title mobile blog
+    meta(name="description", content='description content')
+
+    //favicon
+    //link(rel="icon" href="./img/favicon/favicon.ico" type="image/x-icon")
+    //link(rel='apple-touch-icon' sizes='180x180' href='./img/favicon/apple-touch-icon.png')
+    //link(rel='icon' type='image/png' sizes='32x32' href='./img/favicon/favicon-32x32.png')
+    //link(rel='icon' type='image/png' sizes='16x16' href='./img/favicon/favicon-16x16.png')
+    //link(rel='manifest' href='./img/favicon/site.webmanifest')
+    //link(rel='mask-icon' href='./img/favicon/safari-pinned-tab.svg' color='#ffa200')
+    //meta(name='msapplication-TileColor' content='#ffc40d')
+    //meta(name='theme-color' content='#ffffff')
+
+    // example
+    //if (pageActive === "homepage")
+      link(rel='stylesheet', href='./css/libs/slick.css?' + cacheFix)
+      link(rel='stylesheet', href='./css/slider.css?' + cacheFix)
+
+    link(rel='stylesheet', href='./css/libs/bootstrap-grid.css?' + cacheFix)
+    link(rel='stylesheet', href='./css/libs/swiper-bundle.css?' + cacheFix)
+    link(rel='stylesheet', href='./css/main.css?' + cacheFix)
+
+  body(class="page " + pageClass)
+    .page__wrapper
+      include modules/_header
+
+      main.page__content
+        block content
+
+      include modules/_footer
+      include modules/_mobile-menu
+
+      // example
+      //if (pageActive === "consolidation")
+      //  include modules/_consolidations-popup
+
+      include modules/_site-popup.pug
+
+    block scripts
+      script(src='./js/libs/lazysizes.js')
+      script(src='./js/libs/swiper-bundle.js')
+      script(src='./js/main.js?' + cacheFix)

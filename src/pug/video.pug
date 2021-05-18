@@ -1,0 +1,301 @@
+extends _layout
+
+block vars
+	- var pageTitle = "Video page";
+	- var pageClass = "videopage";
+	- var pageActive = "videopage";
+
+block content
+	div.main-wrap
+	.section-videos
+		.current-page.mobile-current-page
+			a(href='#') Відео
+		.container-fluid.container
+			.section-videos__inner.row
+				.section-videos__filter-wrapper
+					.section-videos__filters
+						.section-videos__filter
+							.section-videos__filter-input
+								input(type='text' placeholder='Рік')
+								.section-videos__filter-ico.js_filter_years_btn
+									include ../img/ico/arrow-down-thin-ico.svg
+							.section-videos__filter-list-wrapper
+								ul.section-videos__filter-list.js_filter_years_list
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label 2020
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label 2019
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label 2018
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label 2017
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label 2016
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label 2015
+
+								.section-videos__filter-submit-remove
+									.section-videos__filter-btn.section-videos__filter-btn-submit
+										button(type='submit') подати заявку
+									.section-videos__filter-btn
+										button(type='submit') видалити
+											span.section-videos__filter-counter (2)
+
+
+						.section-videos__filter
+							.section-videos__filter-input
+								input(type='text' placeholder='Теги')
+								.section-videos__filter-ico.js_filter_tags_btn
+									include ../img/ico/arrow-down-thin-ico.svg
+							.section-videos__filter-list-wrapper
+								ul.section-videos__filter-list.js_filter_tags_list
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label COVID
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Політика
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Крим
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Пандемія
+									li.section-videos__filter-item
+										label
+											input(type="checkbox")
+											span.section-videos__filter-item-label Україна
+
+								.section-videos__filter-submit-remove
+									.section-videos__filter-btn.section-videos__filter-btn-submit
+										button(type='submit') подати заявку
+									.section-videos__filter-btn
+										button(type='submit') видалити
+											span.section-videos__filter-counter (1)
+
+
+
+
+
+
+
+
+
+
+				.section-videos__content.row
+					.section-videos__video.col
+						.section-videos__video-tags
+							.section-videos__video-tags-content
+								span #KRYM
+								span #UKRAINA
+								span #COVID
+								span #PANDEMIA
+
+						.section-videos__video-content
+							a(href='#').video-link
+							.section-videos__video-image
+								picture
+									source(srcset="img/image/video/video-1.webp" type="image/webp")
+									img(src="img/image/video/video-1.png" alt="img").lazyload
+
+							.section-videos__video-date-rewiews
+								p.article-date 14.10.2010
+								.section-videos__video-date-rewiews-counter
+									.section-videos__video-comment
+										include ../img/ico/comments-icosvg.svg
+										span 123
+									.section-videos__video-rewiews
+										include ../img/ico/viewes-ico.svg
+										span 284
+							.section-videos__video-description
+								h2.site-text__large Не будем оценивать военную реалистичнос этого "блицкрига", обсудим то, что за его угрозой стоит.
+
+					.section-videos__video.col
+						.section-videos__video-tags
+							.section-videos__video-tags-content
+								span #KRYM
+								span #UKRAINA
+								span #KRYM
+								span #UKRAINA
+								span #COVID
+								span #PANDEMIA
+								span #KRYM
+								span #UKRAINA
+								span #COVID
+								span #PANDEMIA
+						.section-videos__video-content
+							a(href='#').video-link
+							.section-videos__video-image
+								picture
+									source(srcset="img/image/video/video-2.webp" type="image/webp")
+									img(src="img/image/video/video-2.png" alt="img").lazyload
+
+							.section-videos__video-date-rewiews
+								p.article-date 14.10.2010
+								.section-videos__video-date-rewiews-counter
+									.section-videos__video-comment
+										include ../img/ico/comments-icosvg.svg
+										span 123
+									.section-videos__video-rewiews
+										include ../img/ico/viewes-ico.svg
+										span 284
+							.section-videos__video-description
+								h2.site-text__large Не будем оценивать военную.
+
+				.section-videos__content.row
+					.section-videos__video.col
+						.section-videos__video-tags
+							.section-videos__video-tags-content
+								span #KRYM
+								span #UKRAINA
+								span #KRYM
+								span #UKRAINA
+								span #COVID
+								span #PANDEMIA
+								span #KRYM
+								span #UKRAINA
+								span #COVID
+								span #PANDEMIA
+
+						.section-videos__video-content
+							a(href='#').video-link
+							.section-videos__video-image
+								picture
+									source(srcset="img/image/video/video-3.webp" type="image/webp")
+									img(src="img/image/video/video-3.png" alt="img").lazyload
+
+							.section-videos__video-date-rewiews
+								p.article-date 14.10.2010
+								.section-videos__video-date-rewiews-counter
+									.section-videos__video-comment
+										include ../img/ico/comments-icosvg.svg
+										span 123
+									.section-videos__video-rewiews
+										include ../img/ico/viewes-ico.svg
+										span 284
+							.section-videos__video-description
+								h2.site-text__large Не будем оценивать военную.
+
+					.section-videos__video.col
+						.section-videos__video-tags
+							.section-videos__video-tags-content
+								span #KRYM
+								span #UKRAINA
+								span #KRYM
+								span #PANDEMIA
+						.section-videos__video-content
+							a(href='#').video-link
+							.section-videos__video-image
+								picture
+									source(srcset="img/image/video/video-4.webp" type="image/webp")
+									img(src="img/image/video/video-4.png" alt="img").lazyload
+
+							.section-videos__video-date-rewiews
+								p.article-date 14.10.2010
+								.section-videos__video-date-rewiews-counter
+									.section-videos__video-comment
+										include ../img/ico/comments-icosvg.svg
+										span 123
+									.section-videos__video-rewiews
+										include ../img/ico/viewes-ico.svg
+										span 284
+							.section-videos__video-description
+								h2.site-text__large Не будем оценивать военную реалистичнос этого "блицкрига", обсудим то, что за его угрозой стоит.
+
+
+				.section-videos__content.row
+					.section-videos__video.col
+						.section-videos__video-tags
+							.section-videos__video-tags-content
+								span #KRYM
+								span #UKRAINA
+								span #COVID
+								span #PANDEMIA
+
+						.section-videos__video-content
+							a(href='#').video-link
+							.section-videos__video-image
+								picture
+									source(srcset="img/image/video/video-5.webp" type="image/webp")
+									img(src="img/image/video/video-5.png" alt="img").lazyload
+
+							.section-videos__video-date-rewiews
+								p.article-date 14.10.2010
+								.section-videos__video-date-rewiews-counter
+									.section-videos__video-comment
+										include ../img/ico/comments-icosvg.svg
+										span 123
+									.section-videos__video-rewiews
+										include ../img/ico/viewes-ico.svg
+										span 284
+							.section-videos__video-description
+								h2.site-text__large Не будем оценивать военную реалистичнос этого "блицкрига", обсудим то, что за его угрозой стоит.
+
+					.section-videos__video.col
+						.section-videos__video-tags
+							.section-videos__video-tags-content
+								span #KRYM
+								span #UKRAINA
+								span #KRYM
+								span #UKRAINA
+								span #COVID
+								span #PANDEMIA
+								span #KRYM
+								span #UKRAINA
+								span #COVID
+								span #PANDEMIA
+						.section-videos__video-content
+							a(href='#').video-link
+							.section-videos__video-image
+								picture
+									source(srcset="img/image/video/video-6.webp" type="image/webp")
+									img(src="img/image/video/video-6.png" alt="img").lazyload
+
+							.section-videos__video-date-rewiews
+								p.article-date 14.10.2010
+								.section-videos__video-date-rewiews-counter
+									.section-videos__video-comment
+										include ../img/ico/comments-icosvg.svg
+										span 123
+									.section-videos__video-rewiews
+										include ../img/ico/viewes-ico.svg
+										span 284
+							.section-videos__video-description
+								h2.site-text__large Не будем оценивать военную.
+
+
+
+			.section-videos__pagination.row
+				.section-videos__pagination-content.col
+					.section-videos__pagination-numbers
+						span
+							a(href='#')._active 01
+						span
+							a(href='#') 02
+						span
+							a(href='#') 03
+						span
+							a(href='#') 04
+					.section-videos__pagination-btn
+						.section-videos__pagination-btn-next
+							a(href='#') Next
+						.section-videos__pagination-btn-arrow
+							a(href='#')
+								include ../img/ico/arrow-right-ico.svg
+								include ../img/ico/arrow-right-ico.svg
