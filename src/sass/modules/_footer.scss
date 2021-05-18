@@ -88,12 +88,15 @@
 	}
 
 	&__links-menu {
+		position: relative;
 		margin-right: 80px;
 		@include for-680 {
 			margin-right: 0;
 		}
 	}
-
+	&__links-info{
+		position: relative;
+	}
 	&__links-title {
 		display: flex;
 		justify-content: space-between;
@@ -127,8 +130,20 @@
 
 	&__links-list {
 		@include for-680 {
-			display: none;
+			//display: none;
 			visibility: hidden;
+			position: absolute;
+			top: -150%;
+			left: 0;
+			width: 100%;
+			background-color: #262626;
+			transition: .4s;
+			z-index: 5;
+		}
+		&._active{
+			//display: block;
+			visibility: visible;
+			top: 56px;
 		}
 	}
 
@@ -147,6 +162,7 @@
 	}
 
 	&__partner {
+		position: relative;
 		@include for-800 {
 			margin-top: 50px;
 		}
@@ -183,7 +199,22 @@
 
 	&__partner-dashboard {
 		@include for-680 {
-			display: none;
+			//display: none;
+			visibility: hidden;
+			position: absolute;
+			bottom: -150%;
+			left: 0;
+			width: 100%;
+			background-color: #262626;
+			transition: .4s;
+			z-index: 5;
+			padding: 0 15px;
+		}
+
+		&._active {
+			//display: block;
+			visibility: visible;
+			bottom: 56px;
 		}
 	}
 

@@ -1,0 +1,81 @@
+extends _layout
+
+block vars
+	- var pageTitle = "Video page";
+	- var pageClass = "videopage";
+	- var pageActive = "videopage";
+
+block content
+	div.main-wrap
+	.section-videos
+		.current-page.mobile-current-page
+			a(href='#') Відео
+		.container-fluid.container
+			.section-videos__inner.row
+				.section-videos__filter-wrapper
+					.section-videos__filters
+						.section-videos__filter
+							.section-videos__filter-input
+								input(type='text' placeholder='Рік')
+								.section-videos__filter-ico
+									include ../img/ico/arrow-down-thin-ico.svg
+						.section-videos__filter
+							.section-videos__filter-input
+								input(type='text' placeholder='Теги')
+								.section-videos__filter-ico
+									include ../img/ico/arrow-down-thin-ico.svg
+
+			.section-videos__inner.row
+				.section-videos__video.col
+					.section-videos__video-tags
+						span #KRYM
+						span #UKRAINA
+						span #COVID
+						span #PANDEMIA
+					.section-videos__video-content
+						a(href='#').video-link
+						.section-videos__video-image
+							picture
+								source(srcset="img/image/video/video-1.webp" type="image/webp")
+								img(src="img/image/video/video-1.png" alt="img").lazyload
+
+						.section-videos__video-date-rewiews
+							p.article-date 14.10.2010
+							.section-videos__video-comment
+								include ../img/ico/comments-icosvg.svg
+								span 123
+							.section-videos__video-rewiews
+								include ../img/ico/viewes-ico.svg
+								span 284
+						.section-videos__video-description
+							h2.site-text__large Не будем оценивать военную реалистичнос этого "блицкрига", обсудим то, что за его угрозой стоит.
+
+				.section-videos__video.col
+					.section-videos__video-tags
+						span #KRYM
+						span #UKRAINA
+						span #KRYM
+						span #UKRAINA
+						span #COVID
+						span #PANDEMIA
+						span #KRYM
+						span #UKRAINA
+						span #COVID
+						span #PANDEMIA
+					.section-videos__video-content
+						a(href='#').video-link
+						.section-main-articles__article-image
+							picture
+								source(srcset="img/image/video/video-2.webp" type="image/webp")
+								img(src="img/image/video/video-2.png" alt="img").lazyload
+
+						.section-videos__video-date-rewiews
+							p.article-date 14.10.2010
+							.section-videos__video-comment
+								include ../img/ico/comments-icosvg.svg
+								span 123
+							.section-videos__video-rewiews
+								include ../img/ico/viewes-ico.svg
+								span 284
+						.section-videos__video-description
+							h2.site-text__large Не будем оценивать военную реалистичнос этого "блицкрига", обсудим то, что за его угрозой стоит.

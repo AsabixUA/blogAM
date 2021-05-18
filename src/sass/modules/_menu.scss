@@ -1,6 +1,7 @@
 .mobile-menu {
   display: none;
 	position: absolute;
+	z-index: 99;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -57,6 +58,8 @@
 		align-items: center;
 		justify-content: flex-end;
 		margin-bottom: 91px;
+		cursor: pointer;
+
     svg{
       max-width: 24px;
       max-height: 24px;
