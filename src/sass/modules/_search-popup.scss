@@ -104,26 +104,22 @@
 		border: 0;
 		padding: 0;
 		cursor: pointer;
-		width: 100%;
-
 		position: relative;
 		top: 150px;
-		right: 130px;
+		right: -35%;
 
 
 		&:hover {
-			transform: scale(1);
+			transform: scale(1.05);
 		}
 		@include for-1100{
 			margin-bottom: 90px;
 			top: 50px;
-			right: 70px;
 		}
 		@include for-800{
 			margin-bottom: 90px;
-			position: unset;
 			top: 0;
-			right: 0;
+			right: -48%;
 		}
 	}
 
