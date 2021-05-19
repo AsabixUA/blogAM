@@ -203,6 +203,7 @@
 			flex-direction: column-reverse;
 			margin-top: 0;
 		}
+
 	}
 
 	&__text {
@@ -668,6 +669,17 @@
 
 // page videos start
 
+.filter-icon {
+	display: none;
+	position: absolute;
+	top: 20px;
+	left: 111px;
+	cursor: pointer;
+	@include for-680 {
+		display: block;
+	}
+}
+
 .section-videos {
 
 	&__inner {
@@ -727,6 +739,7 @@
 	}
 
 	&__video-content {
+		position: relative;
 	}
 
 	&__video-image {
@@ -835,19 +848,35 @@
 		padding: 19px 15px;
 		min-width: 264px;
 		height: 355px;
-		overflow-y: auto;
-		overflow-x: hidden;
+		transform: translateY(120%);
+		visibility: hidden;
+		transition: .3s;
+		opacity: 0;
+		z-index: -1;
+
+		&._active {
+			transform: translateY(0);
+			visibility: visible;
+			opacity: 1;
+			z-index: 5;
+		}
+	}
+
+	&__filter-ico {
+		&._active {
+			transform: rotate(180deg);
+		}
 	}
 
 	&__filter-list {
-		overflow-y: auto;
-		overflow-x: hidden;
+		overflow-y: scroll;
 		margin-bottom: 10px;
 
 
 		&::-webkit-scrollbar {
 			width: 4px;
 		}
+
 		&::-webkit-scrollbar-track {
 			background: #fff;
 			border: 1px solid;
@@ -864,23 +893,24 @@
 	&__filter-item {
 		margin-bottom: 20px;
 
-		input[type="checkbox"]{
+		input[type="checkbox"] {
 			display: none;
 		}
 
-		label{
+		label {
+			display: flex;
 			font-family: 'FiraSansExtraCondensed-Regular', sans-serif;
 			font-weight: 400;
 			font-size: 21px;
 			line-height: 26px;
-			text-transform: uppercase;
+			//width: 100%;
 
-			span{
+			span {
 				position: relative;
 				padding-left: 40px;
 				cursor: pointer;
 
-				&:before{
+				&:before {
 					content: '';
 					z-index: 5;
 					position: absolute;
@@ -892,7 +922,7 @@
 					border-radius: 2px;
 				}
 
-				&:after{
+				&:after {
 					content: '';
 					position: absolute;
 					left: 0;
@@ -903,8 +933,8 @@
 				}
 			}
 
-			input[type="checkbox"]:checked ~ span{
-				&:after{
+			input[type="checkbox"]:checked ~ span {
+				&:after {
 					background-color: black;
 					background: url("../img/ico/tick-ico.svg");
 					background-size: 18px;
@@ -934,6 +964,7 @@
 		margin: 0 auto;
 
 		button {
+			cursor: pointer;
 			padding: 8px 20px;
 			width: 100%;
 			font-family: 'FiraSansExtraCondensed-Medium', sans-serif;

@@ -37,6 +37,64 @@ window.onload = function () {
 	// video filter input end
 
 
+	// mobile filter start
+
+	let filterBtnOpen = document.querySelector('.filter-icon');
+	let filterBtnSection = document.querySelector('.section__filter-btn--mobile');
+	let closeFilterMobile = document.querySelector('.section__filter-close--mobile');
+	let filterMobile = document.querySelector('.section__filter-wrapper--mobile');
+
+	filterBtnOpen.onclick = () => {
+		filterMobile.classList.add('_active');
+	}
+
+	closeFilterMobile.onclick = () => {
+		filterMobile.classList.remove('_active');
+	}
+
+
+	let filterTagsOpenBtnMobile = document.querySelector('.js_filter_tags_btn_mobile');
+	let filterTagsItemListMobile = document.querySelector('.js_filter_tags_list_mobile');
+	let filterTagsPlusIco = document.querySelector('.js_filter_plus--tags');
+	let filterTagsMinusIco = document.querySelector('.js_filter_minus--tags');
+
+	filterTagsOpenBtnMobile.onclick = function () {
+		filterBtnSection.classList.toggle('_active');
+		filterTagsPlusIco.classList.toggle('_active');
+		filterTagsMinusIco.classList.toggle('_active');
+		filterTagsItemListMobile.classList.toggle('_active');
+	}
+
+
+	let yearsOpenBtnMobile = document.querySelector('.js_filter_years_btn_mobile');
+	let yearsItemListMobile = document.querySelector('.js_filter_years_list_mobile');
+	let filterYearsPlusIco = document.querySelector('.js_filter_plus--years');
+	let filterYearsMinusIco = document.querySelector('.js_filter_minus--years');
+
+	yearsOpenBtnMobile.onclick = function () {
+		filterBtnSection.classList.toggle('_active');
+		filterYearsPlusIco.classList.toggle('_active');
+		filterYearsMinusIco.classList.toggle('_active');
+		yearsItemListMobile.classList.toggle('_active');
+	}
+
+
+	let filterTypesOpenBtnMobile = document.querySelector('.js_filter_types_btn_mobile');
+	let filterTypesItemListMobile = document.querySelector('.js_filter_types_list_mobile');
+	let filterTypesPlusIco = document.querySelector('.js_filter_plus--types');
+	let filterTypesMinusIco = document.querySelector('.js_filter_minus--types');
+
+	filterTypesOpenBtnMobile.onclick = function () {
+		filterBtnSection.classList.toggle('_active');
+		filterTypesPlusIco.classList.toggle('_active');
+		filterTypesMinusIco.classList.toggle('_active');
+		filterTypesItemListMobile.classList.toggle('_active');
+	}
+
+
+	// mobile filter end
+
+
 	//slider main page start
 
 	const swiper = new Swiper('.swiper-container', {
