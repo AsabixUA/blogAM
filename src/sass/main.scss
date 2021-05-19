@@ -539,7 +539,8 @@
 				background-color: #fff;
 				color: #000;
 				border: 1px solid #000;
-				svg > *{
+
+				svg > * {
 					fill: black;
 				}
 			}
@@ -713,7 +714,6 @@
 // page videos start
 
 
-
 .section-videos {
 
 	&__inner {
@@ -836,6 +836,7 @@
 			}
 		}
 	}
+
 	&__pagination {
 		margin-bottom: 90px;
 	}
@@ -909,3 +910,119 @@
 }
 
 // page videos end
+
+
+// page articles start
+
+.section-articles {
+
+	&__inner {
+		margin-bottom: 100px;
+	}
+
+	&__content {
+		padding: 60px 0;
+		border-bottom: 1px solid #000;
+	}
+
+	&__date {
+		margin-bottom: 18px;
+	}
+
+	&__author {
+		text-transform: uppercase;
+	}
+
+	&__title {
+		h2 {
+			margin-bottom: 10px;
+			text-transform: uppercase;
+			font-family: 'FiraSansExtraCondensed-Bold', sans-serif;
+			font-weight: 700;
+			font-size: 54px;
+			line-height: 67px;
+			text-transform: uppercase;
+			color: #000000;
+		}
+	}
+
+	&__body {
+		padding-left: 200px;
+
+	}
+
+	&__text {
+		margin-bottom: 25px;
+	}
+
+	&__tags {
+		margin-bottom: 45px;
+
+	}
+
+	&__tags-content {
+		span {
+			font-family: 'FiraSansExtraCondensed-SemiBold', sans-serif;
+			font-weight: 600;
+			font-size: 21px;
+			line-height: 26px;
+			text-transform: uppercase;
+			margin-right: 14px;
+			@include for-680 {
+				font-size: 18px;
+				line-height: 22px;
+			}
+		}
+	}
+
+	&__reaction {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__reaction-views {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__reaction-button {
+		padding: 17px 22px;
+		background-color: #000;
+		display: flex;
+		align-items: center;
+		border: 1px solid transparent;
+
+		a {
+			margin-right: 5px;
+			font-family: 'FiraSansExtraCondensed-Bold';
+			font-weight: 700;
+			font-size: 36px;
+			line-height: 45px;
+			text-transform: uppercase;
+			transition: .3s;
+			color: #fff;
+		}
+
+		&:hover {
+			background-color: #fff;
+			color: #000;
+			border: 1px solid #000;
+			box-shadow: 0 0 5px 0 #000;
+
+			a {
+				color: #000;
+			}
+
+			span {
+				svg > * {
+					fill: #000;
+				}
+			}
+		}
+	}
+
+}
+
+
+// page articles end
