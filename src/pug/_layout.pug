@@ -4,7 +4,7 @@ block vars
   - var cacheFix = parseInt(Math.random()*1000)
 
 doctype html
-html(lang="uk")
+html(lang="ru")
   head
     meta(charset="utf-8")
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
@@ -40,6 +40,8 @@ html(lang="uk")
 
       include modules/_footer
       include modules/_mobile-menu
+      include modules/_mobile-lang
+      include modules/_mobile-search
 
       // example
       //if (pageActive === "consolidation")
@@ -48,6 +50,7 @@ html(lang="uk")
       include modules/_site-popup.pug
 
     block scripts
-      script(src='./js/libs/lazysizes.js')
+      //script(src='./js/libs/lazysizes.js')
       script(src='./js/libs/swiper-bundle.js')
+      script(src='./js/validate-form.js')
       script(src='./js/main.js?' + cacheFix)

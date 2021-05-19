@@ -326,6 +326,7 @@ body.disable-scroll{
 	font-size: 36px;
 	line-height: 45px;
 	text-transform: uppercase;
+	transition: .3s;
 
 	&--red {
 		color: #fff;
@@ -335,6 +336,12 @@ body.disable-scroll{
 	&--black {
 		color: #fff;
 		background-color: #000;
+		&:hover{
+			background-color: #fff;
+			color: #000;
+			border: 1px solid #000;
+			box-shadow: 0 0 5px 0 #000;
+		}
 	}
 }
 

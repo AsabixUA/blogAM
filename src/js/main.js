@@ -1,5 +1,12 @@
 window.onload = function () {
 
+	//disable scroll body start
+
+	let body = document.querySelector('body');
+	let disableScrollClass = 'disable-scroll';
+
+	//disable scroll body end
+
 	// menu mobile start
 
 	let btnMenuOpen = document.querySelector('.menu-open');
@@ -7,14 +14,51 @@ window.onload = function () {
 	let mobileMenu = document.querySelector('.mobile-menu');
 
 	btnMenuOpen.onclick = () => {
+		body.classList.add(disableScrollClass)
 		mobileMenu.classList.toggle('_active');
 	}
 
+
 	btnMenuClose.onclick = () => {
+		body.classList.remove(disableScrollClass);
 		mobileMenu.classList.toggle('_active');
 	}
 
 	// menu mobile end
+
+
+	// lang list mobile start
+
+	let langMobileBtnOpen = document.querySelector('.js_lang_mobile_btn');
+	let langMobileBtnClose = document.querySelector('.js_close-lang-btn');
+	let langMobileList = document.querySelector('.js_lang_mobile_list');
+
+	langMobileBtnOpen.onclick = () => {
+		body.classList.add(disableScrollClass)
+		langMobileList.classList.toggle('_active');
+	}
+	langMobileBtnClose.onclick = () => {
+		body.classList.remove(disableScrollClass);
+		langMobileList.classList.toggle('_active');
+	}
+
+	// lang list mobile end
+
+	if(pageClass.classList.contains('videopage')) {
+	// search start
+
+
+	let searchPopup = document.querySelector('.js_search_list');
+	let searchHeaderOpenBtn = document.querySelector('.header__search');
+	let searchMobileOpenBtn = document.querySelector('.js_search_mobile_btn');
+	let searchMobileCloseBtn = document.querySelector('.js_close-search-btn');
+
+	searchMobileOpenBtn.onclick = () => searchPopup.classList.toggle('_active');
+	searchHeaderOpenBtn.onclick = () => searchPopup.classList.toggle('_active');
+	searchMobileCloseBtn.onclick = () => searchPopup.classList.toggle('_active');
+
+
+	// search end
 
 	// video filter input start
 
@@ -46,10 +90,12 @@ window.onload = function () {
 
 	filterBtnOpen.onclick = () => {
 		filterMobile.classList.add('_active');
+		body.classList.add(disableScrollClass);
 	}
 
 	closeFilterMobile.onclick = () => {
 		filterMobile.classList.remove('_active');
+		body.classList.remove(disableScrollClass);
 	}
 
 
@@ -91,37 +137,37 @@ window.onload = function () {
 		filterTypesItemListMobile.classList.toggle('_active');
 	}
 
-
+}
 	// mobile filter end
 
 
 	//slider main page start
 
-	const swiper = new Swiper('.swiper-container', {
-		pagination: {
-			el: '.swiper-pagination',
-		},
-	});
-
-	//slider main page end
-
-	// footer start
-	let footer = document.querySelector('footer')
-	let footerMenuPlusBtn = document.querySelector('.js_footer-menu-btn');
-	let footerInfoPlusBtn = document.querySelector('.js_footer-info-btn');
-	let footerPartnerPlusBtn = document.querySelector('.js_footer-partner-btn');
-
-	footerMenuPlusBtn.onclick = function () {
-		this.nextElementSibling.classList.toggle('_active');
+	if(pageClass.classList.contains('homepage')) {
+		const swiper = new Swiper('.swiper-container', {
+			pagination: {
+				el: '.swiper-pagination',
+			},
+		});
 	}
-	footerInfoPlusBtn.onclick = function () {
-		this.nextElementSibling.classList.toggle('_active');
-	}
-	footerPartnerPlusBtn.onclick = function () {
-		this.nextElementSibling.classList.toggle('_active');
-		console.log(this)
-	}
+		//slider main page end
 
+		// footer start
+		let footer = document.querySelector('footer')
+		let footerMenuPlusBtn = document.querySelector('.js_footer-menu-btn');
+		let footerInfoPlusBtn = document.querySelector('.js_footer-info-btn');
+		let footerPartnerPlusBtn = document.querySelector('.js_footer-partner-btn');
+
+		footerMenuPlusBtn.onclick = function () {
+			this.nextElementSibling.classList.toggle('_active');
+		}
+		footerInfoPlusBtn.onclick = function () {
+			this.nextElementSibling.classList.toggle('_active');
+		}
+		footerPartnerPlusBtn.onclick = function () {
+			this.nextElementSibling.classList.toggle('_active');
+			console.log(this)
+		}
 
 	// footer end
 

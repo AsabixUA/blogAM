@@ -7,8 +7,6 @@ header.header
 						picture
 							source(srcset="img/image/logo-header.webp" type="image/webp")
 							img(src="img/image/logo-header.png" alt="img").lazyload
-			.filter-icon
-				include ../../img/ico/filters-ico.svg
 			.header__nav-wrapper
 				.header__nav
 					.header__nav-item.site-title__small
@@ -34,6 +32,9 @@ header.header
 					.header__nav-item
 						.header__search
 							include ../../img/ico/search-ico.svg
+				.header__menu-lang--mobile
+					.header__menu-lang--mobile-item.js_lang_mobile_btn
+						| UA
 				.header__menu-mobile-btn
 					.header__btn-menu.menu-open._active
 						include  ../../img/ico/hamburger.svg
