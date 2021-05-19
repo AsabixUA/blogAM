@@ -70,9 +70,9 @@ gulp.task('css-libs', () => {
       'node_modules/swiper/swiper-bundle.css',
   ])
     .pipe(gulp.dest('dist/css/libs/'))
-    // .pipe(cssmin())
-    // .pipe(rename({suffix: '.min'}))
-    // .pipe(gulp.dest('dist/css/libs/'))
+     .pipe(cssmin())
+     .pipe(rename({suffix: '.min'}))
+     .pipe(gulp.dest('dist/css/libs/'))
     .pipe(browserSync.reload({stream: true}));
 });
 
@@ -83,9 +83,9 @@ gulp.task('js-libs', () => {
       'node_modules/swiper/swiper-bundle.js',
     ])
     .pipe(gulp.dest('dist/js/libs/'))
-    // .pipe(uglify())
-    // .pipe(rename({suffix: '.min'}))
-    // .pipe(gulp.dest('dist/js/libs'))
+     .pipe(uglify())
+     .pipe(rename({suffix: '.min'}))
+     .pipe(gulp.dest('dist/js/libs'))
     .pipe(browserSync.reload({stream: true}));
 });
 

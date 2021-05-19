@@ -74,6 +74,7 @@
 			font-family: 'FiraSansExtraCondensed-Medium', sans-serif;
 			font-weight: 500;
 			transition: .3s;
+
 			&:hover {
 				border-bottom: 1px solid #fff;
 			}
@@ -151,20 +152,18 @@
 
 	&__links-list {
 		@include for-680 {
-			//display: none;
 			visibility: hidden;
-			position: absolute;
-			top: -150%;
-			left: 0;
+			opacity: 0;
+			height: 0;
 			width: 100%;
 			background-color: #262626;
-			transition: .4s;
 			z-index: 5;
 		}
 
 		&._active {
-			//display: block;
+			height: 100%;
 			visibility: visible;
+			opacity: 1;
 			top: 56px;
 		}
 	}
@@ -192,7 +191,7 @@
 	&__partner {
 		position: relative;
 		@include for-800 {
-			margin-top: 50px;
+			//margin-top: 50px;
 		}
 		@include for-680 {
 			margin-top: 0;
@@ -228,14 +227,11 @@
 
 	&__partner-dashboard {
 		@include for-680 {
-			//display: none;
 			visibility: hidden;
-			position: absolute;
-			bottom: -150%;
-			left: 0;
+			opacity: 0;
+			height: 0;
 			width: 100%;
 			background-color: #262626;
-			transition: .4s;
 			z-index: 5;
 			padding: 0 15px;
 		}
@@ -243,34 +239,38 @@
 		&._active {
 			//display: block;
 			visibility: visible;
+			opacity: 1;
+			height: 100%;
 			bottom: 56px;
 		}
 	}
 
 	&__partner-row {
 		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 		margin-bottom: 22px;
+		//max-width: 380px;
 		@include for-680 {
-			display: block;
 		}
 	}
 
 	&__partner-item {
 		min-width: 110px;
 		min-height: 45px;
-		margin: 0 12px;
 		transition: .3s;
-
-		&:first-child {
-			margin-left: 0;
-		}
-
-		&:last-child {
-			margin-right: 0;
-		}
+		max-width: 110px;
+		margin-bottom: 10px;
+		//&:first-child {
+		//	margin-left: 0;
+		//}
+		//
+		//&:last-child {
+		//	margin-right: 0;
+		//}
 
 		@include for-680 {
-			margin: 10px 0;
+			margin: 10px 6px;
 		}
 
 

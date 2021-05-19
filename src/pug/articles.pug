@@ -1,0 +1,38 @@
+extends _layout
+
+block vars
+	- var pageTitle = "Articles page";
+	- var pageClass = "articlespage";
+	- var pageActive = "articlespage";
+
+block content
+	div.main-wrap
+	.section-article
+		.filter-icon
+			include ../img/ico/filters-ico.svg
+		.current-page.mobile-current-page
+			a(href='#') Статті
+		.container-fluid.container
+			.section-videos__inner.row
+				include ./modules/_content-filter
+
+				.section-articles__content.row
+
+			.section-videos__pagination.row
+				.section-videos__pagination-content.col
+					.section-videos__pagination-numbers
+						span
+							a(href='#')._active 01
+						span
+							a(href='#') 02
+						span
+							a(href='#') 03
+						span
+							a(href='#') 04
+					.section-videos__pagination-btn
+						.section-videos__pagination-btn-next
+							a(href='#') Next
+						.section-videos__pagination-btn-arrow
+							a(href='#')
+								include ../img/ico/arrow-right-ico.svg
+								include ../img/ico/arrow-right-ico.svg

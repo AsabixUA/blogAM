@@ -14,249 +14,7 @@ block content
 			a(href='#') Відео
 		.container-fluid.container
 			.section-videos__inner.row
-				.section-videos__filter-wrapper
-					.section-videos__filters
-						.section-videos__filter
-							.section-videos__filter-input
-								input(type='text' placeholder='Рік')
-								.section-videos__filter-ico.js_filter_years_btn
-									include ../img/ico/arrow-down-thin-ico.svg
-							.section-videos__filter-list-wrapper.js_filter_years_list
-								ul.section-videos__filter-list
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label 2020
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label 2019
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label 2018
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label 2017
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label 2016
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label 2015
-
-								.section-videos__filter-submit-remove
-									.section-videos__filter-btn.section-videos__filter-btn-submit
-										button(type='submit') подати заявку
-									.section-videos__filter-btn
-										button(type='submit') видалити
-											span.section-videos__filter-counter (2)
-
-
-						.section-videos__filter
-							.section-videos__filter-input
-								input(type='text' placeholder='Теги')
-								.section-videos__filter-ico.js_filter_tags_btn
-									include ../img/ico/arrow-down-thin-ico.svg
-							.section-videos__filter-list-wrapper.js_filter_tags_list
-								ul.section-videos__filter-list
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label COVID
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Політика
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Крим
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Пандемія
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Україна
-
-								.section-videos__filter-submit-remove
-									.section-videos__filter-btn.section-videos__filter-btn-submit
-										button(type='submit') подати заявку
-									.section-videos__filter-btn
-										button(type='submit') видалити
-											span.section-videos__filter-counter (1)
-
-				// filter mobile start
-
-				.section__filter-wrapper--mobile
-					.section__filter-close--mobile.close-filter-btn
-						include ../img/ico/close-ico--white.svg
-					.section__filters--mobile
-						.section__filter--mobile
-							.section__filter-item--mobile.js_filter_tags_btn_mobile
-								.section__filter-item-text--mobile
-									| теги
-								.section__filter-item-open--mobile._active.js_filter_plus--tags
-									include ../img/ico/plus-ico.svg
-								.section__filter-item-close--mobile.js_filter_minus--tags
-									include ../img/ico/minus-ico.svg
-							.section__filter-list-wrapper--mobile.js_filter_tags_list_mobile
-								ul.section-videos__filter-list--mobile
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label COVID
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Політика
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Крим
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Пандемія
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Україна
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Україна
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Україна
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Україна
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Україна
-
-
-						.section__filter--mobile
-							.section__filter-item--mobile.js_filter_years_btn_mobile
-								.section__filter-item-text--mobile
-									| рік
-								.section__filter-item-open--mobile._active.js_filter_plus--years
-									include ../img/ico/plus-ico.svg
-								.section__filter-item-close--mobile.js_filter_minus--years
-									include ../img/ico/minus-ico.svg
-							.section__filter-list-wrapper--mobile.js_filter_years_list_mobile
-								ul.section-videos__filter-list--mobile
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label COVID
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Політика
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Крим
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Пандемія
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Україна
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Україна
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Україна
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Україна
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Україна
-
-
-
-
-
-
-
-						.section__filter--mobile
-							.section__filter-item--mobile.js_filter_types_btn_mobile
-								.section__filter-item-text--mobile
-									| типу
-								.section__filter-item-open--mobile._active.js_filter_plus--types
-									include ../img/ico/plus-ico.svg
-								.section__filter-item-close--mobile.js_filter_minus--types
-									include ../img/ico/minus-ico.svg
-							.section__filter-list-wrapper--mobile.js_filter_types_list_mobile
-								ul.section-videos__filter-list--mobile
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label COVID
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Політика
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Крим
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Пандемія
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Україна
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Україна
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Україна
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Україна
-									li.section-videos__filter-item
-										label
-											input(type="checkbox")
-											span.section-videos__filter-item-label Україна
-
-
-
-
-
-					.section__filter-btn--mobile
-						.section__filet-cansel-btn--mobile
-							button(type='submit') скасувати фільтри
-						.section__filet-submit-btn--mobile
-							button(type='submit') застосувати
-
-				// filter mobile end
-
+				include ./modules/_content-filter
 
 				.section-videos__content.row
 					.section-videos__video.col
@@ -271,8 +29,11 @@ block content
 							a(href='#').video-link
 							.section-videos__video-image
 								picture
-									source(srcset="img/image/video/video-1.webp" type="image/webp")
-									img(src="img/image/video/video-1.png" alt="img").lazyload
+									source(srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+										data-srcset="./img/image/video/video-1.webp" type="image/webp").lazyload
+									img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+										data-src="./img/image/video/video-1.png" alt='img' width="380" height="230").lazyload
+
 
 							.section-videos__video-date-rewiews
 								p.article-date 14.10.2010
@@ -302,9 +63,13 @@ block content
 						.section-videos__video-content
 							a(href='#').video-link
 							.section-videos__video-image
+
 								picture
-									source(srcset="img/image/video/video-2.webp" type="image/webp")
-									img(src="img/image/video/video-2.png" alt="img").lazyload
+									source(srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+										data-srcset="./img/image/video/video-2.webp" type="image/webp").lazyload
+									img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+										data-src="./img/image/video/video-2.png" alt='img' width="380" height="230").lazyload
+
 
 							.section-videos__video-date-rewiews
 								p.article-date 14.10.2010
@@ -337,8 +102,12 @@ block content
 							a(href='#').video-link
 							.section-videos__video-image
 								picture
-									source(srcset="img/image/video/video-3.webp" type="image/webp")
-									img(src="img/image/video/video-3.png" alt="img").lazyload
+									source(srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+										data-srcset="./img/image/video/video-3.webp" type="image/webp").lazyload
+									img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+										data-src="./img/image/video/video-3.png" alt='img' width="380" height="230").lazyload
+
+
 
 							.section-videos__video-date-rewiews
 								p.article-date 14.10.2010
@@ -362,9 +131,14 @@ block content
 						.section-videos__video-content
 							a(href='#').video-link
 							.section-videos__video-image
+
 								picture
-									source(srcset="img/image/video/video-4.webp" type="image/webp")
-									img(src="img/image/video/video-4.png" alt="img").lazyload
+									source(srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+										data-srcset="./img/image/video/video-4.webp" type="image/webp").lazyload
+									img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+										data-src="./img/image/video/video-4.png" alt='img' width="380" height="230").lazyload
+
+
 
 							.section-videos__video-date-rewiews
 								p.article-date 14.10.2010
@@ -391,9 +165,14 @@ block content
 						.section-videos__video-content
 							a(href='#').video-link
 							.section-videos__video-image
+
 								picture
-									source(srcset="img/image/video/video-5.webp" type="image/webp")
-									img(src="img/image/video/video-5.png" alt="img").lazyload
+									source(srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+										data-srcset="./img/image/video/video-5.webp" type="image/webp").lazyload
+									img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+										data-src="./img/image/video/video-5.png" alt='img' width="380" height="230").lazyload
+
+
 
 							.section-videos__video-date-rewiews
 								p.article-date 14.10.2010
@@ -423,9 +202,14 @@ block content
 						.section-videos__video-content
 							a(href='#').video-link
 							.section-videos__video-image
+
 								picture
-									source(srcset="img/image/video/video-6.webp" type="image/webp")
-									img(src="img/image/video/video-6.png" alt="img").lazyload
+									source(srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+										data-srcset="./img/image/video/video-6.webp" type="image/webp").lazyload
+									img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+										data-src="./img/image/video/video-6.png" alt='img' width="380" height="230").lazyload
+
+
 
 							.section-videos__video-date-rewiews
 								p.article-date 14.10.2010
