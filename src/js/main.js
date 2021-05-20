@@ -50,6 +50,10 @@ window.onload = function () {
 	if (pageClass.classList.contains('homepage') ||
 			pageClass.classList.contains('aboutpage') ||
 			pageClass.classList.contains('articlespage') ||
+			pageClass.classList.contains('termspage') ||
+			pageClass.classList.contains('error404') ||
+			pageClass.classList.contains('photopage') ||
+			pageClass.classList.contains('searchpage') ||
 			pageClass.classList.contains('videopage')) {
 
 		let searchPopup = document.querySelector('.js_search_list');
@@ -68,6 +72,8 @@ window.onload = function () {
 	// filter input start
 
 	if (pageClass.classList.contains('articlespage') ||
+		 	pageClass.classList.contains('photopage') ||
+		 	pageClass.classList.contains('searchpage') ||
 			pageClass.classList.contains('videopage')) {
 
 
@@ -94,7 +100,9 @@ window.onload = function () {
 	// mobile filter start
 
 	if (pageClass.classList.contains('articlespage') ||
-			pageClass.classList.contains('videopage')){
+			pageClass.classList.contains('videopage') ||
+			pageClass.classList.contains('searchpage') ||
+			pageClass.classList.contains('photopage') ){
 
 		let filterBtnOpen = document.querySelector('.filter-icon');
 		let filterBtnSection = document.querySelector('.section__filter-btn--mobile');

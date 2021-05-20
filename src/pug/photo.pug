@@ -1,22 +1,22 @@
 extends _layout
 
 block vars
-	- var pageTitle = "Video page";
-	- var pageClass = "videopage";
-	- var pageActive = "videopage";
+	- var pageTitle = "Photo page";
+	- var pageClass = "photopage";
+	- var pageActive = "photopage";
 
 block content
 	div.main-wrap
-	.section-videos
+	.section-photo
 		.filter-icon
 			include ../img/ico/filters-ico.svg
 		.current-page.mobile-current-page
-			a(href='#') Відео
+			a(href='#') фото
 		.container-fluid.container
-			.section-videos__inner.row
+			.section-photo__inner.row
 				include ./modules/_content-filter
 
-				.section-videos__content.row
+				.section-photo__content.row
 					.section-dashboard__item.col
 						.section-dashboard__item-tags
 							.section-dashboard__item-tags-content
@@ -83,7 +83,6 @@ block content
 							.section-dashboard__item-description
 								h2.site-text__large Не будем оценивать военную.
 
-				.section-videos__content.row
 					.section-dashboard__item.col
 						.section-dashboard__item-tags
 							.section-dashboard__item-tags-content
@@ -121,6 +120,7 @@ block content
 							.section-dashboard__item-description
 								h2.site-text__large Не будем оценивать военную.
 
+				.section-photo__content.row
 					.section-dashboard__item.col
 						.section-dashboard__item-tags
 							.section-dashboard__item-tags-content
@@ -153,7 +153,109 @@ block content
 								h2.site-text__large Не будем оценивать военную реалистичнос этого "блицкрига", обсудим то, что за его угрозой стоит.
 
 
-				.section-videos__content.row
+					.section-dashboard__item.col
+						.section-dashboard__item-tags
+							.section-dashboard__item-tags-content
+								span #KRYM
+								span #UKRAINA
+								span #COVID
+								span #PANDEMIA
+
+						.section-dashboard__item-content
+							a(href='#').video-link
+							.section-dashboard__item-image
+
+								picture
+									source(srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+										data-srcset="./img/image/video/video-5.webp" type="image/webp").lazyload
+									img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+										data-src="./img/image/video/video-5.png" alt='img' width="380" height="230").lazyload
+
+
+
+							.section-dashboard__item-date-rewiews
+								p.article-date 14.10.2010
+								.section-dashboard__item-date-rewiews-counter
+									.section-dashboard__item-comment
+										include ../img/ico/comments-icosvg.svg
+										span 123
+									.section-dashboard__item-rewiews
+										include ../img/ico/viewes-ico.svg
+										span 284
+							.section-dashboard__item-description
+								h2.site-text__large Не будем оценивать военную реалистичнос этого "блицкрига", обсудим то, что за его угрозой стоит.
+
+					.section-dashboard__item.col
+						.section-dashboard__item-tags
+							.section-dashboard__item-tags-content
+								span #KRYM
+								span #UKRAINA
+								span #KRYM
+								span #UKRAINA
+								span #COVID
+								span #PANDEMIA
+								span #KRYM
+								span #UKRAINA
+								span #COVID
+								span #PANDEMIA
+						.section-dashboard__item-content
+							a(href='#').video-link
+							.section-dashboard__item-image
+
+								picture
+									source(srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+										data-srcset="./img/image/video/video-6.webp" type="image/webp").lazyload
+									img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+										data-src="./img/image/video/video-6.png" alt='img' width="380" height="230").lazyload
+
+
+
+							.section-dashboard__item-date-rewiews
+								p.article-date 14.10.2010
+								.section-dashboard__item-date-rewiews-counter
+									.section-dashboard__item-comment
+										include ../img/ico/comments-icosvg.svg
+										span 123
+									.section-dashboard__item-rewiews
+										include ../img/ico/viewes-ico.svg
+										span 284
+							.section-dashboard__item-description
+								h2.site-text__large Не будем оценивать военную.
+
+
+				.section-photo__content.row
+					.section-dashboard__item.col
+						.section-dashboard__item-tags
+							.section-dashboard__item-tags-content
+								span #KRYM
+								span #UKRAINA
+								span #KRYM
+								span #PANDEMIA
+						.section-dashboard__item-content
+							a(href='#').video-link
+							.section-dashboard__item-image
+
+								picture
+									source(srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+										data-srcset="./img/image/video/video-4.webp" type="image/webp").lazyload
+									img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+										data-src="./img/image/video/video-4.png" alt='img' width="380" height="230").lazyload
+
+
+
+							.section-dashboard__item-date-rewiews
+								p.article-date 14.10.2010
+								.section-dashboard__item-date-rewiews-counter
+									.section-dashboard__item-comment
+										include ../img/ico/comments-icosvg.svg
+										span 123
+									.section-dashboard__item-rewiews
+										include ../img/ico/viewes-ico.svg
+										span 284
+							.section-dashboard__item-description
+								h2.site-text__large Не будем оценивать военную реалистичнос этого "блицкрига", обсудим то, что за его угрозой стоит.
+
+
 					.section-dashboard__item.col
 						.section-dashboard__item-tags
 							.section-dashboard__item-tags-content

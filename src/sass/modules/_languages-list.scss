@@ -39,14 +39,15 @@
 		&:last-child {
 			border-bottom: 1px solid #959595;
 		}
-
-		&:hover {
-			transform: scale(1.05);
-			border-bottom: 1px solid #959595;
+		p{
+			transition: .3s;
 		}
-
 		span {
 			padding-right: 5px;
+		}
+
+		&:hover > p{
+			transform: scale(1.05);
 		}
 	}
 

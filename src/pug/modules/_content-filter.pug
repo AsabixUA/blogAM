@@ -38,7 +38,15 @@
 					.section-content__filter-btn
 						button(type='submit') видалити
 							span.section-content__filter-counter (2)
-
+			.section-content__filters-choose
+				.section-content__filter-tick
+					span 2019
+					span
+						include ../../img/ico/remove-filter-ico.svg
+				.section-content__filter-tick
+					span 2019
+					span
+						include ../../img/ico/remove-filter-ico.svg
 
 		.section-content__filter
 			.section-content__filter-input
@@ -74,6 +82,13 @@
 					.section-content__filter-btn
 						button(type='submit') видалити
 							span.section-content__filter-counter (1)
+			.section-content__filters-choose._active
+				.section-content__filter-tick
+					span Крим
+					span
+						include ../../img/ico/remove-filter-ico.svg
+		.section-content__filter-rem-choose._active
+			button видалити фільтри
 
 // filter mobile start
 
@@ -84,7 +99,7 @@
 		.section__filter--mobile
 			.section__filter-item--mobile.js_filter_tags_btn_mobile
 				.section__filter-item-text--mobile
-					| теги
+					p теги
 				.section__filter-item-open--mobile._active.js_filter_plus--tags
 					include ../../img/ico/plus-ico.svg
 				.section__filter-item-close--mobile.js_filter_minus--tags
@@ -132,7 +147,7 @@
 		.section__filter--mobile
 			.section__filter-item--mobile.js_filter_years_btn_mobile
 				.section__filter-item-text--mobile
-					| рік
+					p рік
 				.section__filter-item-open--mobile._active.js_filter_plus--years
 					include ../../img/ico/plus-ico.svg
 				.section__filter-item-close--mobile.js_filter_minus--years
@@ -185,7 +200,7 @@
 		.section__filter--mobile
 			.section__filter-item--mobile.js_filter_types_btn_mobile
 				.section__filter-item-text--mobile
-					| типу
+					p типу
 				.section__filter-item-open--mobile._active.js_filter_plus--types
 					include ../../img/ico/plus-ico.svg
 				.section__filter-item-close--mobile.js_filter_minus--types
