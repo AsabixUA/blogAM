@@ -1,0 +1,230 @@
+extends _layout
+
+block vars
+	- var pageTitle = "Video-article page";
+	- var pageClass = "video-article-page";
+	- var pageActive = "video-article-page";
+
+block content
+	div.main-wrap
+		.current-page.mobile-current-page
+			a(href='#') відео
+		.section-article-item__btn-back.section-article-item__btn-back-mobile
+			a(href='./video.html')
+				span
+					include ../img/ico/arrow-left-ico.svg
+				span BACK
+		.section-article-item__container
+			.container-fluid.container
+				.section-article-item__body-container.row
+					.section-article-item__reviews--mobile
+						.section-dashboard__item-date-rewiews
+							p.article-date 14.10.2010
+							.section-dashboard__item-date-rewiews-counter
+								.section-dashboard__item-comment
+									include ../img/ico/comments-icosvg.svg
+									span 123
+								.section-dashboard__item-rewiews
+									include ../img/ico/viewes-ico.svg
+									span 284
+
+					.section-article-item__title
+						h2 что за его угрозой стоит.
+
+					.section-article-item__body
+
+						.section-article-item__description
+							.section-article-item__description-inner
+								.section-article-item__subtitle
+									h2 Не будем оценивать военную реалистичность этого "блицкрига", обсудим то, что за его угрозой стоит.
+								.section-article-item__date
+									.section-dashboard__item-date-rewiews
+										p.article-date 14.10.2010
+								.section-article-item__text
+									.section-article-item__paragraph Путин Грозит помножить на ноль все договоренности о разведении сил и прочую "мирную" лабуду, которая для русских ничего не стоит. Цель – принудить власти нашей страны принять т.н. "Минск-3" на продиктованных Россией условиях. Иначе – обострение в ОРДЛО, никакого "мира", обещанного украинцам на выборах год назад, и так далее. Путин хорошо знает болезненные внутриполитические точки Зеленского и целенаправленно по ним бьет. При этом видно, как хозяин Кремля спешит дестабилизировать Украину, для которой его условия "мира" категорически неприемлемы: президент Украины никогда на них не пойдет, как бы ни звучала его фамилия.
+									.section-article-item__img
+										picture
+											source(srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+												data-srcset="./img/image/video-page/video-page-1.webp" type="image/webp").lazyload
+											img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+												data-src="./img/image/video-page/video-page-1.png" alt='img' width="380" height="230").lazyload
+
+										.section-article-item__img-ico
+											include ../img/ico/play-ico.svg
+
+
+									.section-article-item__paragraph Кроме этого "мирного" ультиматума, Кремль продолжает наступление – пока медийное – на крымском направлении. Ему не дает покоя то, что Верховная Рада, Правительство, Президент, наконец, разблокировали государственную поддержку телеканалу ATR, что про воду в Крым больше нигде на официальном уровне не говорится, как и о снятии с России каких-либо санкций. То есть – задание, поставленное Кремлем своим агентам влияния и медиадиверсантам в Украине, провалено. Но "боевая" задача для них осталась. А Меджлис крымскотатарского народа, телеканал ATR и лично его гендиректор Ленур Ислямов как координатор Гражданской блокады Крыма 2015 года являются теми важнейшими мишенями, по которым нужно продолжать палить как и из чего только можно.
+									.section-article-item__paragraph Поэтому сегодня на пресс-конференции президента представитель телеканализации под названием "НАШ" публично протранслировал Владимиру Зеленскому ложь о том, что якобы Ленур Ислямов – гражданин России.
+									.section-article-item__tags
+										span #KRYM
+										span #UKRAINA
+										span #COVID
+										span #PANDEMIA
+									.section-article-item__social
+										.section-article-item__social-ico
+											a(href='#')
+												include ../img/ico/socail-facebook-footer-ico.svg
+										.section-article-item__social-ico
+											a(href='#')
+												include ../img/ico/linkedin.svg
+										.section-article-item__social-ico
+											a(href='#')
+												include ../img/ico/socail-twitter-footer-ico.svg
+									.section-article-item__btn-back
+										a(href='./video.html')
+											span
+												include ../img/ico/arrow-left-ico.svg
+											span повернутися до відео
+
+
+				.section-article-item__comments.row
+					.section-article-item__comments-top
+						.section-article-item__comments-title
+							.section-article-item__comments-title-ico
+								a(href='')
+									include ../img/ico/comments-icosvg.svg
+							.section-article-item__comments-title-text 24  коментарів
+						.section-article-item__btn-login--mobile
+							.section-article-item__btn-login--mobile-text Log in or register to leave your comment
+							.section-article-item__btn-login--mobile-ico
+									include ../img/ico/arrow-right-ico--white.svg
+
+					.section-article-item__comments-body-container
+						.section-article-item__comments-body
+							ul.section-article-item__comments-body-list
+								li.section-article-item__comments-item-container
+									.section-article-item__comments-item
+										.section-article-item__comments-item-user-ico
+											a(href='')
+												include ../img/ico/user-template-ico.svg
+										.section-article-item__comments-item-wrapper
+											.section-article-item__comments-item-info
+												.section-article-item__comments-item-user-name
+													span додав
+													span.user-name
+														a(href='#') Павло Бабченко
+													span ,
+												.section-article-item__comments-item-date 21 вересня 2020 o 15:17
+											.section-article-item__comments-item-text Кроме этого "мирного" ультиматума, Кремль продолжает наступление – пока медийное – на крымском направлении. Ему не дает покоя то, что Верховная Рада, Правительство, Президент, наконец, разблокировали государственную поддержку телеканалу ATR, что про воду в Крым больше нигде на официальном уровне не говорится, как и о снятии с России каких-либо санкций. То есть – задание, поставленное Кремлем своим агентам влияния и медиадиверсантам в Украине, провалено. Но "боевая" задача для них осталась. А Меджлис крымскотатарского народа, телеканал ATR и лично его гендиректор Ленур Ислямов как координатор Гражданской блокады Крыма 2015 года являются теми важнейшими мишенями, по которым нужно продолжать палить как и из чего только можно.
+											.section-article-item__comments-item-answer-btn.js_add_comment відповісти:
+
+											.section-article-item__comment-answer-form
+												.section-article-item__comment-answer-textarea
+													textarea.comment_area(type='text' placeholder='Пишіть тут...')
+												.section-article-item__comment-answer-btn.js_comment_submit
+													button Потім відповідь
+
+									ul.section-article-item__comments-body-list
+										li.section-article-item__comments-item-container
+											.section-article-item__comments-item
+												.section-article-item__comments-item-user-ico
+													a(href='')
+														include ../img/ico/user-template-ico.svg
+												.section-article-item__comments-item-wrapper
+													.section-article-item__comments-item-info
+														.section-article-item__comments-item-user-name
+															span додав
+															span.user-name
+																a(href='#') Павло Бабченко
+															span ,
+														.section-article-item__comments-item-date 21 вересня 2020 o 15:17
+													.section-article-item__comments-item-text Кроме этого "мирного" ультиматума, Кремль продолжает наступление – пока медийное – на крымском направлении. Ему не дает покоя то, что Верховная Рада, Правительство, Президент, наконец, разблокировали государственную поддержку телеканалу ATR, что про воду в Крым больше нигде на официальном уровне не говорится, как и о снятии с России каких-либо санкций. То есть – задание, поставленное Кремлем своим агентам влияния и медиадиверсантам в Украине, провалено. Но "боевая" задача для них осталась. А Меджлис крымскотатарского народа, телеканал ATR и лично его гендиректор Ленур Ислямов как координатор Гражданской блокады Крыма 2015 года являются теми важнейшими мишенями, по которым нужно продолжать палить как и из чего только можно.
+													.section-article-item__comments-item-answer-btn.js_add_comment відповісти:
+
+													.section-article-item__comment-answer-form
+														.section-article-item__comment-answer-textarea
+															textarea.comment_area(type='text' placeholder='Пишіть тут...')
+														.section-article-item__comment-answer-btn.js_comment_submit
+															button Потім відповідь
+
+
+											ul.section-article-item__comments-body-list
+												li.section-article-item__comments-item-container
+													.section-article-item__comments-item
+														.section-article-item__comments-item-user-ico
+															a(href='')
+																include ../img/ico/user-template-ico.svg
+														.section-article-item__comments-item-wrapper
+															.section-article-item__comments-item-info
+																.section-article-item__comments-item-user-name
+																	span додав
+																	span.user-name
+																		a(href='#') Павло Бабченко
+																	span ,
+																.section-article-item__comments-item-date 21 вересня 2020 o 15:17
+															.section-article-item__comments-item-text Кроме этого "мирного" ультиматума, Кремль продолжает наступление – пока медийное – на крымском направлении. Ему не дает покоя то, что Верховная Рада, Правительство, Президент, наконец, разблокировали государственную поддержку телеканалу ATR, что про воду в Крым больше нигде на официальном уровне не говорится, как и о снятии с России каких-либо санкций. То есть – задание, поставленное Кремлем своим агентам влияния и медиадиверсантам в Украине, провалено. Но "боевая" задача для них осталась. А Меджлис крымскотатарского народа, телеканал ATR и лично его гендиректор Ленур Ислямов как координатор Гражданской блокады Крыма 2015 года являются теми важнейшими мишенями, по которым нужно продолжать палить как и из чего только можно.
+															.section-article-item__comments-item-answer-btn.js_add_comment відповісти:
+
+															.section-article-item__comment-answer-form
+																.section-article-item__comment-answer-textarea
+																	textarea.comment_area(type='text' placeholder='Пишіть тут...')
+																.section-article-item__comment-answer-btn.js_comment_submit
+																	button Потім відповідь
+
+													ul.section-article-item__comments-body-list
+
+
+										li.section-article-item__comments-item-container
+											.section-article-item__comments-item
+												.section-article-item__comments-item-user-ico
+													a(href='')
+														include ../img/ico/user-template-ico.svg
+												.section-article-item__comments-item-wrapper
+													.section-article-item__comments-item-info
+														.section-article-item__comments-item-user-name
+															span додав
+															span.user-name
+																a(href='#') Павло Бабченко
+															span ,
+														.section-article-item__comments-item-date 21 вересня 2020 o 15:17
+													.section-article-item__comments-item-text Кроме этого "мирного" ультиматума, Кремль продолжает наступление – пока медийное – на крымском направлении. Ему не дает покоя то, что Верховная Рада, Правительство, Президент, наконец, разблокировали государственную поддержку телеканалу ATR, что про воду в Крым больше нигде на официальном уровне не говорится, как и о снятии с России каких-либо санкций. То есть – задание, поставленное Кремлем своим агентам влияния и медиадиверсантам в Украине, провалено. Но "боевая" задача для них осталась. А Меджлис крымскотатарского народа, телеканал ATR и лично его гендиректор Ленур Ислямов как координатор Гражданской блокады Крыма 2015 года являются теми важнейшими мишенями, по которым нужно продолжать палить как и из чего только можно.
+													.section-article-item__comments-item-answer-btn.js_add_comment відповісти:
+
+													.section-article-item__comment-answer-form
+														.section-article-item__comment-answer-textarea
+															textarea.comment_area(type='text' placeholder='Пишіть тут...')
+														.section-article-item__comment-answer-btn.js_comment_submit
+															button Потім відповідь
+
+											ul.section-article-item__comments-body-list
+
+							.section-article-item__comments-body-container
+								.section-article-item__comments-body
+
+									ul.section-article-item__comments-body-list
+										li.section-article-item__comments-item-container
+											.section-article-item__comments-item
+												.section-article-item__comments-item-user-ico
+													a(href='')
+														include ../img/ico/user-template-ico.svg
+												.section-article-item__comments-item-wrapper
+													.section-article-item__comments-item-info
+														.section-article-item__comments-item-user-name
+															span додав
+															span.user-name
+																a(href='#') Павло Бабченко
+															span ,
+														.section-article-item__comments-item-date 21 вересня 2020 o 15:17
+													.section-article-item__comments-item-text Кроме этого "мирного" ультиматума, Кремль продолжает наступление – пока медийное – на крымском направлении. Ему не дает покоя то, что Верховная Рада, Правительство, Президент, наконец, разблокировали государственную поддержку телеканалу ATR, что про воду в Крым больше нигде на официальном уровне не говорится, как и о снятии с России каких-либо санкций. То есть – задание, поставленное Кремлем своим агентам влияния и медиадиверсантам в Украине, провалено. Но "боевая" задача для них осталась. А Меджлис крымскотатарского народа, телеканал ATR и лично его гендиректор Ленур Ислямов как координатор Гражданской блокады Крыма 2015 года являются теми важнейшими мишенями, по которым нужно продолжать палить как и из чего только можно.
+													.section-article-item__comments-item-answer-btn.js_add_comment відповісти:
+
+													.section-article-item__comment-answer-form
+														.section-article-item__comment-answer-textarea
+															textarea.comment_area(type='text' placeholder='Пишіть тут...')
+														.section-article-item__comment-answer-btn.js_comment_submit
+															button Потім відповідь
+
+
+								ul.section-article-item__comments-body-list
+
+						.section-article-item__comment-form
+							.section-article-item__comment-form-title напишіть свій коментар
+							.section-article-item__comment-form-wrapper
+								.section-article-item__comments-item-user-ico
+									a(href='')
+										include ../img/ico/user-template-ico.svg
+								.section-article-item__comment-answer-wrapper
+									.section-article-item__comment-answer-textarea
+										textarea.comment_area(type='text' placeholder='Пишіть тут...')
+									.section-article-item__comment-answer-btn.js_comment_submit
+										button після вашої відповіді

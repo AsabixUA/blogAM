@@ -18,7 +18,6 @@ window.onload = function () {
 		mobileMenu.classList.toggle('_active');
 	}
 
-
 	btnMenuClose.onclick = () => {
 		body.classList.remove(disableScrollClass);
 		mobileMenu.classList.toggle('_active');
@@ -47,33 +46,23 @@ window.onload = function () {
 
 	// search start
 
-	if (pageClass.classList.contains('homepage') ||
-			pageClass.classList.contains('aboutpage') ||
-			pageClass.classList.contains('articlespage') ||
-			pageClass.classList.contains('termspage') ||
-			pageClass.classList.contains('error404') ||
-			pageClass.classList.contains('photopage') ||
-			pageClass.classList.contains('searchpage') ||
-			pageClass.classList.contains('videopage')) {
+	let searchPopup = document.querySelector('.js_search_list');
+	let searchHeaderOpenBtn = document.querySelector('.header__search');
+	let searchMobileOpenBtn = document.querySelector('.js_search_mobile_btn');
+	let searchMobileCloseBtn = document.querySelector('.js_close-search-btn');
 
-		let searchPopup = document.querySelector('.js_search_list');
-		let searchHeaderOpenBtn = document.querySelector('.header__search');
-		let searchMobileOpenBtn = document.querySelector('.js_search_mobile_btn');
-		let searchMobileCloseBtn = document.querySelector('.js_close-search-btn');
+	searchMobileOpenBtn.onclick = () => searchPopup.classList.toggle('_active');
+	searchHeaderOpenBtn.onclick = () => searchPopup.classList.toggle('_active');
+	searchMobileCloseBtn.onclick = () => searchPopup.classList.toggle('_active');
 
-		searchMobileOpenBtn.onclick = () => searchPopup.classList.toggle('_active');
-		searchHeaderOpenBtn.onclick = () => searchPopup.classList.toggle('_active');
-		searchMobileCloseBtn.onclick = () => searchPopup.classList.toggle('_active');
-
-	}
 
 	// search end
 
 	// filter input start
 
 	if (pageClass.classList.contains('articlespage') ||
-		 	pageClass.classList.contains('photopage') ||
-		 	pageClass.classList.contains('searchpage') ||
+			pageClass.classList.contains('photopage') ||
+			pageClass.classList.contains('searchpage') ||
 			pageClass.classList.contains('videopage')) {
 
 
@@ -94,6 +83,17 @@ window.onload = function () {
 		}
 	}
 
+	if (pageClass.classList.contains('searchpage')) {
+
+		let filterTypesOpenBtn = document.querySelector('.js_filter_types_btn')
+		let filterTypesItemList = document.querySelector('.js_filter_types_list')
+
+		filterTypesOpenBtn.onclick = function () {
+			this.classList.toggle('_active')
+			filterTypesItemList.classList.toggle('_active');
+		}
+	}
+
 	// filter input end
 
 
@@ -102,7 +102,7 @@ window.onload = function () {
 	if (pageClass.classList.contains('articlespage') ||
 			pageClass.classList.contains('videopage') ||
 			pageClass.classList.contains('searchpage') ||
-			pageClass.classList.contains('photopage') ){
+			pageClass.classList.contains('photopage')) {
 
 		let filterBtnOpen = document.querySelector('.filter-icon');
 		let filterBtnSection = document.querySelector('.section__filter-btn--mobile');
@@ -119,7 +119,6 @@ window.onload = function () {
 			body.classList.remove(disableScrollClass);
 		}
 
-
 		let filterTagsOpenBtnMobile = document.querySelector('.js_filter_tags_btn_mobile');
 		let filterTagsItemListMobile = document.querySelector('.js_filter_tags_list_mobile');
 		let filterTagsPlusIco = document.querySelector('.js_filter_plus--tags');
@@ -132,7 +131,6 @@ window.onload = function () {
 			filterTagsItemListMobile.classList.toggle('_active');
 		}
 
-
 		let yearsOpenBtnMobile = document.querySelector('.js_filter_years_btn_mobile');
 		let yearsItemListMobile = document.querySelector('.js_filter_years_list_mobile');
 		let filterYearsPlusIco = document.querySelector('.js_filter_plus--years');
@@ -144,7 +142,6 @@ window.onload = function () {
 			filterYearsMinusIco.classList.toggle('_active');
 			yearsItemListMobile.classList.toggle('_active');
 		}
-
 
 		let filterTypesOpenBtnMobile = document.querySelector('.js_filter_types_btn_mobile');
 		let filterTypesItemListMobile = document.querySelector('.js_filter_types_list_mobile');
@@ -161,6 +158,7 @@ window.onload = function () {
 
 	// mobile filter end
 
+
 	//slider main page start
 
 	if (pageClass.classList.contains('homepage')) {
@@ -171,6 +169,7 @@ window.onload = function () {
 		});
 	}
 	//slider main page end
+
 
 	// footer start
 
@@ -201,5 +200,16 @@ window.onload = function () {
 	//move to top end
 
 	// footer end
+
+
+	// search page filter start
+
+
+	if (pageClass.classList.contains('searchpage')) {
+		let filterTypes = document.querySelector('.js_filter_types_search_page');
+		filterTypes.classList.add('_active');
+	}
+
+	// search page filter end
 
 }

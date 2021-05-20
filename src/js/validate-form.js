@@ -1,6 +1,6 @@
 let pageClass = document.querySelector('body');
 
-if(pageClass.classList.contains('homepage')) {
+if (pageClass.classList.contains('homepage')) {
 
 	var newsMail = document.querySelector('.js_validate_email_1');
 	var newsMailSubmitBtn = document.querySelector('.section-news-mailing__form-submit');
@@ -27,3 +27,39 @@ if(pageClass.classList.contains('homepage')) {
 	newsMailSubmitBtn.onclick = () => validate();
 
 }
+
+// check comment start
+
+
+let comentSubmitBtn = document.querySelectorAll('.js_comment_submit');
+
+[].forEach.call(comentSubmitBtn, function (e) {
+	e.addEventListener('click', checkValue, false)
+});
+
+function checkValue() {
+
+	if (this.previousElementSibling.children[0].value !== '') {
+		this.previousElementSibling.style.borderColor = '#959595';
+		this.previousElementSibling.children[0].value = '';
+	} else {
+		this.previousElementSibling.style.borderColor = 'red';
+	}
+
+}
+
+// add comment start
+
+let addBtnComment = document.querySelectorAll('.js_add_comment');
+
+[].forEach.call(addBtnComment, function (e) {
+	e.addEventListener('click', addComment, false)
+});
+
+function addComment() {
+	this.nextElementSibling.classList.toggle('_active');
+}
+
+// add comment end
+
+// check comment end

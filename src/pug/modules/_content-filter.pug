@@ -87,6 +87,32 @@
 					span Крим
 					span
 						include ../../img/ico/remove-filter-ico.svg
+
+		.section-content__filter.js_filter_types_search_page
+			.section-content__filter-input
+				input(type='text' placeholder='типу')
+				.section-content__filter-ico.js_filter_types_btn
+					include ../../img/ico/arrow-down-thin-ico.svg
+			.section-content__filter-list-wrapper.js_filter_types_list
+				ul.section-content__filter-list
+					li.section-content__filter-item
+						label
+							input(type="checkbox")
+							span.section-content__filter-item-label Відео
+					li.section-content__filter-item
+						label
+							input(type="checkbox")
+							span.section-content__filter-item-label Статей
+					li.section-content__filter-item
+						label
+							input(type="checkbox")
+							span.section-content__filter-item-label фото
+
+			.section-content__filters-choose._active
+				.section-content__filter-tick
+					span Фото
+					span
+						include ../../img/ico/remove-filter-ico.svg
 		.section-content__filter-rem-choose._active
 			button видалити фільтри
 
