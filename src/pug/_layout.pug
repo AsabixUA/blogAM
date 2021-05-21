@@ -42,12 +42,8 @@ html(lang="ru")
 		meta(name="theme-color" content="#ffffff")
 		meta(name='theme-color' content='#ffffff')
 
-		// example
-		//if (pageActive === "homepage")
-			link(rel='stylesheet', href='./css/libs/slick.css?' + cacheFix)
-			link(rel='stylesheet', href='./css/slider.css?' + cacheFix)
-
-		link(rel='stylesheet', href='./css/libs/bootstrap-grid.min.css?' + cacheFix)
+		//link(rel='stylesheet', href='./css/libs/bootstrap-grid.min.css?' + cacheFix)
+		//link(rel='stylesheet', href='./css/libs/bootstrap-grid.css?' + cacheFix)
 		link(rel='stylesheet', href='./css/libs/swiper-bundle.min.css?' + cacheFix)
 		link(rel='stylesheet', href='./css/main.css?' + cacheFix)
 
@@ -62,9 +58,12 @@ html(lang="ru")
 			include modules/_mobile-menu
 			include modules/_mobile-lang
 			include modules/_mobile-search
-			include modules/_register-login-popup
+			include modules/_authorization-popup
 			include modules/_login-popup
 			include modules/_register-popup
+			include modules/_contact-popup
+			include modules/_email-popup
+			include modules/_reset-pasword-popup
 
 			// example
 			//if (pageActive === "consolidation")

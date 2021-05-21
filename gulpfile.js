@@ -66,7 +66,7 @@ gulp.task('js', () => {
 gulp.task('css-libs', () => {
   return gulp.src([
       'node_modules/normalize.css/normalize.css',
-      'node_modules/bootstrap/dist/css/bootstrap-grid.css',
+      // 'node_modules/bootstrap/dist/css/bootstrap-grid.css',
       'node_modules/swiper/swiper-bundle.css',
   ])
     .pipe(gulp.dest('dist/css/libs/'))

@@ -1,5 +1,5 @@
 window.onload = function () {
-
+	let pageClass = document.querySelector('body');
 	//disable scroll body start
 
 	let body = document.querySelector('body');
@@ -211,5 +211,112 @@ window.onload = function () {
 	}
 
 	// search page filter end
+
+
+	// popup authorization start
+
+	let popupAuthorization = document.querySelector('.popup-authorization');
+	let authorizationBtnOpen = document.querySelectorAll('.js_authorization_open');
+
+	[].forEach.call(authorizationBtnOpen, function (e) {
+		e.addEventListener('click', openAuthorizPopup, false)
+	});
+
+	function openAuthorizPopup() {
+		popupAuthorization.classList.add('open')
+	}
+
+	// popup authorization end
+
+	// popup contact start
+
+	let contactOpenBtn = document.querySelectorAll('.js__popup_contact_open');
+	let contactPopup = document.querySelector('.popup-contact');
+
+	[].forEach.call(contactOpenBtn, function (e) {
+		e.addEventListener('click', openContactPopup, false)
+	});
+
+	function openContactPopup() {
+		contactPopup.classList.add('open');
+	}
+
+	// popup contact end
+
+	// popup login start
+
+	let loginOpenBtn = document.querySelectorAll('.js__popup_login_open');
+	let loginPopup = document.querySelector('.popup-login');
+
+	[].forEach.call(loginOpenBtn, function (e) {
+		e.addEventListener('click', openLoginPopup, false)
+	});
+
+	function openLoginPopup() {
+		loginPopup.classList.add('open');
+	}
+
+	// popup login end
+
+	// popup register start
+
+	let registerOpenBtn = document.querySelectorAll('.js__popup_register_open');
+	let registerPopup = document.querySelector('.popup-register');
+
+	[].forEach.call(registerOpenBtn, function (e) {
+		e.addEventListener('click', openRegisterPopup, false)
+	});
+
+	function openRegisterPopup() {
+		registerPopup.classList.add('open');
+	}
+
+	// popup register end
+
+	// popup mail start
+
+	let emailOpenBtn = document.querySelectorAll('.js__popup_email_open');
+	let emailPopup = document.querySelector('.popup-email');
+
+	[].forEach.call(emailOpenBtn, function (e) {
+		e.addEventListener('click', openEmailPopup, false)
+	});
+
+	function openEmailPopup() {
+		emailPopup.classList.add('open');
+	}
+
+	// popup mail end
+
+	//popup reset start
+
+	let resetOpenBtn = document.querySelectorAll('.js_reset_popup');
+	let resetPopup = document.querySelector('.popup-reset');
+
+	[].forEach.call(resetOpenBtn, function (e) {
+		e.addEventListener('click', openResetPopup, false)
+	});
+
+	function openResetPopup() {
+		resetPopup.classList.add('open');
+	}
+
+
+	//popup reset end
+
+
+	// popup close start
+
+	let popupBtnClose = document.querySelectorAll('.js_popup_button_close');
+
+	[].forEach.call(popupBtnClose, function (e) {
+		e.addEventListener('click', closePopup, false)
+	});
+
+	function closePopup() {
+		this.closest('.js__popup').classList.remove('open');
+	}
+
+	// popup close end
 
 }
