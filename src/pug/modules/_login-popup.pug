@@ -1,0 +1,23 @@
+.popup-login
+	.popup-login__body
+		.popup-login__inner
+			.popup-login__close
+				.popup-login__close-ico.mobile-close
+					include ../../img/ico/close-ico.svg
+			.popup-login__content.row
+				.popup-login__title LOGIN
+				.popup-login__form
+					.popup-login__email
+						.popup-login__input-item
+							input(type='email')
+						.popup-login__input-item.popup-login__input-title.show Type your email address
+					.popup-login__password
+						.popup-login__input-title.show Type your password
+						.popup-login__password-wrapper
+							input(type='password')
+							.popup-login__password-ico._active
+								include ../../img/ico/viewes-ico--hidden.svg
+							.popup-login__password-ico
+								include ../../img/ico/viewes-ico.svg
+				.popup-login__btn.login LOGIN
+				.popup-login__forgot-password Forgot your password?
