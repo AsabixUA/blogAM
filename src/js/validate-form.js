@@ -39,9 +39,14 @@ function addComment() {
 
 let formSubmitBtn = document.querySelectorAll('.js_submit_form');
 
+let inputEmail = document.querySelectorAll('input[type=email]');
 
 [].forEach.call(formSubmitBtn, function (e) {
 	e.addEventListener('click', validationForm, false)
+});
+
+[].forEach.call(inputEmail, function (e) {
+	e.addEventListener('keyup', validationForm, false)
 });
 
 function validationForm() {
@@ -53,23 +58,53 @@ function validationForm() {
 
 	if (name !== null) {
 
-		if (name.value !== '') {
-			let nameValue = email.value;
-			validateName(nameValue);
-			name.parentElement.classList.remove('invalid')
-		} else {
-			name.parentElement.classList.add('invalid')
+		// if (name.value !== '') {
+		// 	let nameValue = email.value;
+		// 	validateName(nameValue);
+		// 	name.parentElement.classList.remove('invalid')
+		// } else {
+		// 	name.parentElement.classList.add('invalid')
+		// }
+
+		function validateName(nameValue) {
+			const re = (/[.*+?^${}()|[\]\\]/g);
+			return re.test(nameValue);
 		}
+
+		function validate() {
+			const nameValue = name.value;
+
+			if (validateName(nameValue) || nameValue.length > 5) {
+				name.parentElement.classList.remove('invalid')
+			} else {
+				name.parentElement.classList.add('invalid')
+			}
+			return false;
+		}
+
+		validate();
+
 	}
+
 	if (email !== null) {
-		if (email.value !== '') {
-			let emailValue = email.value;
-			validateEmail(emailValue);
-			console.log(email.parentElement)
-			email.parentElement.classList.remove('invalid')
-		} else {
-			email.parentElement.classList.add('invalid')
+
+		function validateEmail(emailValue) {
+			const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			return re.test(emailValue);
 		}
+
+		function validate() {
+			const emailValue = email.value;
+
+			if (validateEmail(emailValue)) {
+				email.parentElement.classList.remove('invalid')
+			} else {
+				email.parentElement.classList.add('invalid')
+			}
+			return false;
+		}
+
+		validate();
 	}
 
 	if (password !== null) {
@@ -95,15 +130,15 @@ function validationForm() {
 
 }
 
-function validateName(name) {
-	const re = (/[.*+?^${}()|[\]\\]/g, '\\$&');
-	return re.test(name);
-}
+// function validateName(name) {
+// 	const re = (/[.*+?^${}()|[\]\\]/g, '\\$&');
+// 	return re.test(name);
+// }
 
-function validateEmail(email) {
-	const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	return re.test(email);
-}
+// function validateEmail(email) {
+// 	const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+// 	return re.test(email);
+// }
 
 function validatePassword(password) {
 	// const re = (/[.*+?^${}()|[\]\\]/g, '\\$&');

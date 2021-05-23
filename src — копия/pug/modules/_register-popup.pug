@@ -1,0 +1,27 @@
+.popup-register.js__popup
+	.popup-register__body
+		.popup-register__inner
+			.popup-register__close
+				.popup-register__close-ico.js_popup_button_close
+					include ../../img/ico/close-ico--white.svg
+			.popup-register__content.row
+				.popup-register__logo
+					include ../../img/ico/logo-ico.svg
+				.popup-register__title Create Account
+				form(action="javascript:void(0)").popup-register__form
+					.popup-register__name
+						.popup-register__input-title.show Type your full name
+						input(type='text').popup-register__input-item.js_validation_name
+					.popup-register__email
+						input(type='email').popup-register__input-item.js_validation_email
+						.popup-register__input-item.popup-register__input-title.show Type your email address
+
+					.popup-register__password-wrapper
+						.popup-register__input-item.popup-register__input-title.show Type your password
+						input(type='password').popup-register__input-item.js_validation_password
+						.popup-register__password-ico._active
+							include ../../img/ico/viewes-ico--hidden.svg
+						.popup-register__password-ico
+							include ../../img/ico/viewes-ico.svg
+					button.popup-register__btn.register.js_submit_form.js_submit_form REGISTER
+			.popup-register__forgot-password By register, you agree to our terms of services

@@ -1,0 +1,17 @@
+extends _layout
+
+block vars
+	- var pageTitle = "Error404";
+	- var pageClass = "error404";
+	- var pageActive = "error404";
+
+block content
+	div.main-wrap
+		.error404-block
+			.container-fluid.container
+				.error404-block__ico
+					h1 404
+				.error404-block__message
+					p PAGE NOT FOUND
+				.error404-block__btn
+					a(href="./index.html") go to home page
