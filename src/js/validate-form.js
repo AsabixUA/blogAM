@@ -6,6 +6,7 @@ let comentSubmitBtn = document.querySelectorAll('.js_comment_submit');
 	e.addEventListener('click', checkValue, false)
 });
 
+
 function checkValue() {
 
 	if (this.previousElementSibling.children[0].value !== '') {
