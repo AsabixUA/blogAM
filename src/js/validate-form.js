@@ -106,14 +106,27 @@ function validationForm() {
 	}
 
 	if (password !== null) {
-		if (password.value !== '' && password.value.length > 8) {
-			let passwordValue = password.value;
-			validatePassword(passwordValue);
-			password.parentElement.classList.remove('invalid')
-		} else {
-			password.parentElement.classList.add('invalid')
-			password.closest('.popup__input').querySelector('.popup__step-item-radio').classList.add('checked');
+		let passwordValue = password.value;
+
+		function validateEmail(passwordValue) {
+			const re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+			return re.test(passwordValue);
 		}
+
+		function validate() {
+			const passwordValue = password.value;
+
+			if (validateEmail(passwordValue)) {
+				password.parentElement.classList.remove('invalid')
+			} else {
+				password.parentElement.classList.add('invalid');
+				// password.closest('.popup__input').querySelector('.popup__step-item-radio').classList.add('checked');
+			}
+			return false;
+		}
+
+		validate();
+
 	}
 
 	if (textarea !== null) {
