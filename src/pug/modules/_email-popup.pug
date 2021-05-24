@@ -1,12 +1,13 @@
-.popup-email.js__popup
-	.popup-email__body
-		.popup-email__inner
-			.popup-email__close
-				.popup-email__close-ico.mobile-close.js_popup_button_close
-					include ../../img/ico/close-ico.svg
-			.popup-email__content.row
-				form(action="javascript:void(0)").popup-email__form
-					.popup-email__email
-						input(type='email').js_validation_email
-						.popup-email__input-item.popup-email__input-title.show Ваша електронна адреса
-					button(type='submit').popup-email__btn.email.js_submit_form вислати
+.popup-email.js__popup.popup-container
+	.popup.popup--email
+		.popup__body
+			.popup__inner
+				.popup__close
+					.popup__close-ico.js_popup_button_close
+						include ../../img/ico/close-ico.svg
+				.popup__content.row
+					form(action="javascript:void(0)").popup__form
+						.popup__input
+							input(type='email').js_validation_email
+							.popup__input-title.contact-email Ваша електронна адреса
+						button(type='submit').popup__btn.white.email.js_submit_form вислати

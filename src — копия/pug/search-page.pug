@@ -1,0 +1,275 @@
+extends _layout
+
+block vars
+	- var pageTitle = "Search page";
+	- var pageClass = "searchpage";
+	- var pageActive = "searchpage";
+
+block content
+	div.main-wrap
+	.section-search
+		.filter-icon
+			include ../img/ico/filters-ico.svg
+		.current-page.mobile-current-page
+			a(href='#') Відео
+		.container-fluid.container
+			.section-search__inner.row
+				include ./modules/_content-filter
+
+				.section-videos__content.row
+					.section-dashboard__item.col
+						.section-dashboard__item-tags
+							.section-dashboard__item-tags-content
+								span #KRYM
+								span #UKRAINA
+								span #COVID
+								span #PANDEMIA
+
+						.section-dashboard__item-content
+							a(href='./video-page.html').video-link
+							.section-dashboard__item-image
+								picture
+									source(srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+										data-srcset="./img/image/video/video-1.webp" type="image/webp").lazyload
+									img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+										data-src="./img/image/video/video-1.png" alt='img' width="380" height="230").lazyload
+
+
+							.section-dashboard__item-date-rewiews
+								p.article-date 14.10.2010
+								.section-dashboard__item-date-rewiews-counter
+									.section-dashboard__item-comment
+										include ../img/ico/comments-icosvg.svg
+										span 123
+									.section-dashboard__item-rewiews
+										include ../img/ico/viewes-ico.svg
+										span 284
+							.section-dashboard__item-description
+								h2.site-text__large Не будем оценивать военную реалистичнос этого "блицкрига", обсудим то, что за его угрозой стоит.
+
+					.section-dashboard__item.col
+						.section-dashboard__item-tags
+							.section-dashboard__item-tags-content
+								span #KRYM
+								span #UKRAINA
+								span #KRYM
+								span #UKRAINA
+								span #COVID
+								span #PANDEMIA
+								span #KRYM
+								span #UKRAINA
+								span #COVID
+								span #PANDEMIA
+						.section-dashboard__item-content
+							a(href='./video-page.html').video-link
+							.section-dashboard__item-image
+
+								picture
+									source(srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+										data-srcset="./img/image/video/video-2.webp" type="image/webp").lazyload
+									img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+										data-src="./img/image/video/video-2.png" alt='img' width="380" height="230").lazyload
+
+
+							.section-dashboard__item-date-rewiews
+								p.article-date 14.10.2010
+								.section-dashboard__item-date-rewiews-counter
+									.section-dashboard__item-comment
+										include ../img/ico/comments-icosvg.svg
+										span 123
+									.section-dashboard__item-rewiews
+										include ../img/ico/viewes-ico.svg
+										span 284
+							.section-dashboard__item-description
+								h2.site-text__large Не будем оценивать военную.
+
+
+			.section-photo__content.row
+				.section-dashboard__item.col
+					.section-dashboard__item-tags
+						.section-dashboard__item-tags-content
+							span #KRYM
+							span #UKRAINA
+							span #COVID
+							span #PANDEMIA
+
+					.section-dashboard__item-content
+						a(href='./photo-page.html').video-link
+						.section-dashboard__item-image
+							picture
+								source(srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+									data-srcset="./img/image/photo/photo-1.webp" type="image/webp").lazyload
+								img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+									data-src="./img/image/photo/photo-1.png" alt='img' width="380" height="230").lazyload
+
+
+						.section-dashboard__item-date-rewiews
+							p.article-date 14.10.2010
+							.section-dashboard__item-date-rewiews-counter
+								.section-dashboard__item-comment
+									include ../img/ico/comments-icosvg.svg
+									span 123
+								.section-dashboard__item-rewiews
+									include ../img/ico/viewes-ico.svg
+									span 284
+						.section-dashboard__item-description
+							h2.site-text__large Не будем оценивать военную реалистичнос этого "блицкрига", обсудим то, что за его угрозой стоит.
+
+				.section-dashboard__item.col
+					.section-dashboard__item-tags
+						.section-dashboard__item-tags-content
+							span #KRYM
+							span #UKRAINA
+							span #KRYM
+							span #UKRAINA
+							span #COVID
+							span #PANDEMIA
+							span #KRYM
+							span #UKRAINA
+							span #COVID
+							span #PANDEMIA
+					.section-dashboard__item-content
+						a(href='./photo-page.html').video-link
+						.section-dashboard__item-image
+
+							picture
+								source(srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+									data-srcset="./img/image/photo/photo-2.webp" type="image/webp").lazyload
+								img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+									data-src="./img/image/photo/photo-2.png" alt='img' width="380" height="230").lazyload
+
+
+						.section-dashboard__item-date-rewiews
+							p.article-date 14.10.2010
+							.section-dashboard__item-date-rewiews-counter
+								.section-dashboard__item-comment
+									include ../img/ico/comments-icosvg.svg
+									span 123
+								.section-dashboard__item-rewiews
+									include ../img/ico/viewes-ico.svg
+									span 284
+						.section-dashboard__item-description
+							h2.site-text__large Не будем оценивать военную.
+
+				.section-dashboard__item.col
+					.section-dashboard__item-tags
+						.section-dashboard__item-tags-content
+							span #KRYM
+							span #UKRAINA
+							span #KRYM
+							span #UKRAINA
+							span #COVID
+							span #PANDEMIA
+							span #KRYM
+							span #UKRAINA
+							span #COVID
+							span #PANDEMIA
+
+					.section-dashboard__item-content
+						a(href='./photo-page.html').video-link
+						.section-dashboard__item-image
+							picture
+								source(srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+									data-srcset="./img/image/photo/photo-3.webp" type="image/webp").lazyload
+								img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+									data-src="./img/image/photo/photo-3.png" alt='img' width="380" height="230").lazyload
+
+
+
+						.section-dashboard__item-date-rewiews
+							p.article-date 14.10.2010
+							.section-dashboard__item-date-rewiews-counter
+								.section-dashboard__item-comment
+									include ../img/ico/comments-icosvg.svg
+									span 123
+								.section-dashboard__item-rewiews
+									include ../img/ico/viewes-ico.svg
+									span 284
+						.section-dashboard__item-description
+							h2.site-text__large Не будем оценивать военную.
+
+
+			.section-articles__content.row
+				.section-articles__date
+					p.article-date 14.10.2010
+				.section-articles__author
+					p.site-text__bold-24 Айдер Муждабаєв
+				.section-articles__title
+					h2 Секрети психології Путіна
+						| <br> ПУТИН СТАВИТ УЛЬТИМАТУМ
+				.section-articles__body-wrapper
+					.section-articles__body
+						.section-articles__text
+							p.site-text__large-24 Сегодня в Киеве прошла очередная пресс-конференция президента Украины Владимира Зеленского. Я не буду подробно анализировать ее содержание, поскольку главного вопроса о противостоянии с Россией никто из журналистов президенту так и не задал.
+						.section-articles__tags
+							.section-articles__tags-content
+								span #KRYM
+								span #UKRAINA
+								span #COVID
+								span #PANDEMIA
+						.section-articles__reaction
+							.section-articles__reaction-views
+								.section-articles__reaction-view
+									include ../img/ico/viewes-ico.svg
+									span 168
+								.section-articles__reaction-comment
+									include ../img/ico/comments-icosvg.svg
+									span 53
+							.section-articles__reaction-button
+								a(href='./article-page.html') перейти до статті
+								span
+									include ../img/ico/arrow-right-ico--white.svg
+
+
+
+
+			.section-articles__content.row
+				.section-articles__date
+					p.article-date 14.10.2010
+				.section-articles__author
+					p.site-text__bold-24 Айдер Муждабаєв
+				.section-articles__title
+					h2 ПУТИН СТАВИТ УЛЬТИМАТУМ ЗЕЛЕНСКОМУ.
+				.section-articles__body-wrapper
+					.section-articles__body
+						.section-articles__text
+							p.site-text__large-24 Сегодня в Киеве прошла очередная пресс-конференция президента Украины Владимира Зеленского. Я не буду подробно анализировать ее содержание, поскольку главного вопроса о противостоянии с Россией никто из журналистов президенту так и не задал.
+						.section-articles__tags
+							.section-articles__tags-content
+								span #KRYM
+								span #UKRAINA
+								span #COVID
+								span #PANDEMIA
+						.section-articles__reaction
+							.section-articles__reaction-views
+								.section-articles__reaction-view
+									include ../img/ico/viewes-ico.svg
+									span 168
+								.section-articles__reaction-comment
+									include ../img/ico/comments-icosvg.svg
+									span 53
+							.section-articles__reaction-button
+								a(href='./article-page.html') перейти до статті
+								span
+									include ../img/ico/arrow-right-ico--white.svg
+
+			//
+			//
+			//.section-videos__pagination.row
+			//	.section-videos__pagination-content.col
+			//		.section-videos__pagination-numbers
+			//			span
+			//				a(href='#')._active 01
+			//			span
+			//				a(href='#') 02
+			//			span
+			//				a(href='#') 03
+			//			span
+			//				a(href='#') 04
+			//		.section-videos__pagination-btn
+			//			.section-videos__pagination-btn-next
+			//				a(href='#') Next
+			//			.section-videos__pagination-btn-arrow
+			//				a(href='#')
+			//					include ../img/ico/arrow-right-ico.svg
+			//					include ../img/ico/arrow-right-ico.svg

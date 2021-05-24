@@ -1,0 +1,17 @@
+.popup-contact.js__popup
+	.popup-contact__body
+		.popup-contact__inner
+			.popup-contact__close
+				.popup-contact__close-ico.js_popup_button_close
+					include ../../img/ico/close-ico.svg
+			.popup-contact__content.row
+				.popup-contact__title зв’язатися зі мною
+				form(action="javascript:void(0)").popup-contact__form
+					textarea(placeholder='Напишіть своє повідомлення тут ...').js_validation_textarea
+					.popup-contact__name
+						.popup-contact__input-title.show Напишіть тут своє повне ім’я ...
+						input(type='text').popup-contact__name-input.js_validation_name
+					.popup-contact__email
+						input(type='email').popup-contact__input-item.js_validation_email
+						.popup-contact__input-item.popup-contact__input-title.show Напишіть тут свою email ...
+					button(type='submit').popup-contact__btn.contact.js_submit_form надішліть своє повідомлення

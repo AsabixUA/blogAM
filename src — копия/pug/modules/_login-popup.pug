@@ -1,0 +1,22 @@
+.popup-login.js__popup
+	.popup-login__body
+		.popup-login__inner
+			.popup-login__close
+				.popup-login__close-ico.mobile-close.js_popup_button_close
+					include ../../img/ico/close-ico.svg
+			.popup-login__content.row
+				.popup-login__title LOGIN
+				form(action="javascript:void(0)").popup-login__form
+					.popup-login__email
+						input(type='email').js_validation_email
+						.popup-login__input-item.popup-login__input-title.show Type your email address
+					.popup-login__password
+						.popup-login__password-wrapper
+							input(type='password').js_validation_password
+							.popup-login__password-ico._active
+								include ../../img/ico/viewes-ico--hidden.svg
+							.popup-login__password-ico
+								include ../../img/ico/viewes-ico.svg
+						.popup-login__input-title.show Type your password
+					button(type='submit').popup-login__btn.login.js_submit_form LOG IN
+					.popup-login__forgot-password.js_reset_popup Forgot your password?

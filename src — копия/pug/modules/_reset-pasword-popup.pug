@@ -1,0 +1,16 @@
+.popup-reset.js__popup
+	.popup--reset__body
+		.popup-reset__inner
+			.popup-reset__close
+				.popup-reset__close-ico.mobile-close.js_popup_button_close
+					include ../../img/ico/close-ico.svg
+			.popup-reset__content.row
+				.popup-reset__title Reset your password
+				.popup-reset__subtitle Enter your email address and we’ll send you a link to reset your password
+				form(action="javascript:void(0)").popup-reset__form
+					.popup-reset__email
+						input(type='email').js_validation_email
+						.popup-reset__input-item.popup-reset__input-title.show Type your email address
+					button(type='submit').popup-reset__btn.reset.js_submit_form send reset link
+				.popup-reset__more-info
+						a(href='tel:#') need more help? contact support

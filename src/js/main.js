@@ -319,4 +319,54 @@ window.onload = function () {
 
 	// popup close end
 
+	// input focus start
+
+	let inputs = document.querySelectorAll('.popup__input');
+
+	[].forEach.call(inputs, function (e) {
+		e.addEventListener('click', moveTitle, false)
+	});
+
+	function moveTitle() {
+		if (this.value == '') {
+			this.querySelector('.popup__input-title').classList.remove('js_title_to_top');
+		} else if (this.value !== '') {
+			this.querySelector('.popup__input-title').classList.add('js_title_to_top');
+		}
+		if (this.classList.contains('js_create_password')) {
+			this.querySelector('.popup__steps').classList.add('_active');
+		}
+	}
+
+// input focus end
+
+	// password show start
+
+	let showPasswordBtn = document.querySelectorAll('.popup__input-ico--show');
+	let hiddenPasswordBtn = document.querySelectorAll('.popup__input-ico--hidden');
+
+	[].forEach.call(showPasswordBtn, function (e) {
+		e.addEventListener('click', showPassword, false);
+	});
+
+	[].forEach.call(hiddenPasswordBtn, function (e) {
+		e.addEventListener('click', hiddenPassword, false);
+	})
+
+
+	function showPassword() {
+		this.closest('.popup__input').querySelector('input').setAttribute('type', 'password')
+		this.previousElementSibling.classList.add('_active')
+		this.classList.toggle('_active')
+	}
+
+	function hiddenPassword() {
+		this.closest('.popup__input').querySelector('input').setAttribute('type', 'text')
+		this.nextElementSibling.classList.add('_active')
+		this.classList.toggle('_active')
+	}
+
+	// password show end
+
+
 }
