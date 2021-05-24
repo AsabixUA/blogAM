@@ -1,4 +1,4 @@
-.popup-register.js__popup.popup-container
+.popup-register.js__popup.popup-container.open
 	.popup.popup--register
 		.popup__body
 			.popup__inner
@@ -17,12 +17,24 @@
 							input(type='email').js_validation_email
 							.popup__input-title.show.white Type your email address
 
-						.popup__input.white
+						.popup__input.js_create_password.white
 							.popup__input-title.show.white  Type your password
 							input(type='password').js_validation_password
 							.popup__input-ico.popup__input-ico--hidden._active
 								include ../../img/ico/viewes-ico--hidden-white.svg
 							.popup__input-ico.popup__input-ico--show
 								include ../../img/ico/viewes-ico-white.svg
+							.popup__steps
+								.popup__steps-container
+									.popup__step-title Your password must have:
+									.popup__step-item.length-rule
+										.popup__step-item-radio
+										.popup__step-item-text 8 or more characters
+									.popup__step-item.letters-rule
+										.popup__step-item-radio
+										.popup__step-item-text Upper & lowercase letters
+									.popup__step-item.number-rule
+										.popup__step-item-radio
+										.popup__step-item-text At least one number
 						button.popup__btn.white.js_submit_form REGISTER
 					.popup__info.white By register, you agree to our terms of services

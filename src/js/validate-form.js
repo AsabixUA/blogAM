@@ -40,12 +40,17 @@ function addComment() {
 let formSubmitBtn = document.querySelectorAll('.js_submit_form');
 
 let inputEmail = document.querySelectorAll('input[type=email]');
+let passwordEmail = document.querySelectorAll('input[type=password]');
 
 [].forEach.call(formSubmitBtn, function (e) {
 	e.addEventListener('click', validationForm, false)
 });
 
 [].forEach.call(inputEmail, function (e) {
+	e.addEventListener('keyup', validationForm, false)
+});
+
+[].forEach.call(passwordEmail, function (e) {
 	e.addEventListener('keyup', validationForm, false)
 });
 
@@ -58,23 +63,16 @@ function validationForm() {
 
 	if (name !== null) {
 
-		// if (name.value !== '') {
-		// 	let nameValue = email.value;
-		// 	validateName(nameValue);
-		// 	name.parentElement.classList.remove('invalid')
-		// } else {
-		// 	name.parentElement.classList.add('invalid')
-		// }
-
 		function validateName(nameValue) {
-			const re = (/[.*+?^${}()|[\]\\]/g);
+			const re = /[.*+?^${}()|[\]\\]/g;
+			console.log(nameValue)
 			return re.test(nameValue);
 		}
 
 		function validate() {
 			const nameValue = name.value;
 
-			if (validateName(nameValue) || nameValue.length > 5) {
+			if (validateName(nameValue) && nameValue.length > 5) {
 				name.parentElement.classList.remove('invalid')
 			} else {
 				name.parentElement.classList.add('invalid')
@@ -108,12 +106,13 @@ function validationForm() {
 	}
 
 	if (password !== null) {
-		if (password.value !== '') {
+		if (password.value !== '' && password.value.length > 8) {
 			let passwordValue = password.value;
 			validatePassword(passwordValue);
 			password.parentElement.classList.remove('invalid')
 		} else {
 			password.parentElement.classList.add('invalid')
+			password.closest('.popup__input').querySelector('.popup__step-item-radio').classList.add('checked');
 		}
 	}
 

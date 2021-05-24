@@ -333,6 +333,9 @@ window.onload = function () {
 		} else if (this.value !== '') {
 			this.querySelector('.popup__input-title').classList.add('js_title_to_top');
 		}
+		if (this.classList.contains('js_create_password')) {
+			this.querySelector('.popup__steps').classList.add('_active');
+		}
 	}
 
 // input focus end
