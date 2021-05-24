@@ -33,14 +33,15 @@ function addComment() {
 
 // check comment end
 
-
 // validation form start
 
 
 let formSubmitBtn = document.querySelectorAll('.js_submit_form');
 
 let inputEmail = document.querySelectorAll('input[type=email]');
-let passwordEmail = document.querySelectorAll('input[type=password]');
+let inputPassword = document.querySelectorAll('input[type=password]');
+let inputText = document.querySelectorAll('input[type=text]');
+let textareaField = document.querySelectorAll('textarea');
 
 [].forEach.call(formSubmitBtn, function (e) {
 	e.addEventListener('click', validationForm, false)
@@ -50,7 +51,14 @@ let passwordEmail = document.querySelectorAll('input[type=password]');
 	e.addEventListener('keyup', validationForm, false)
 });
 
-[].forEach.call(passwordEmail, function (e) {
+[].forEach.call(inputPassword, function (e) {
+	e.addEventListener('keyup', validationForm, false)
+});
+
+[].forEach.call(inputText, function (e) {
+	e.addEventListener('keyup', validationForm, false)
+});
+[].forEach.call(textareaField, function (e) {
 	e.addEventListener('keyup', validationForm, false)
 });
 
@@ -60,28 +68,36 @@ function validationForm() {
 	let email = form.querySelector('.js_validation_email');
 	let password = form.querySelector('.js_validation_password');
 	let textarea = form.querySelector('.js_validation_textarea');
+	let wrongInfo = form.querySelector('.popup__wrong-field');
+
 
 	if (name !== null) {
+		//
+		// function validateName(nameValue) {
+		// 	const re = /[.*+?^${}()|[\]\\]/g;
+		// 	return re.test(nameValue);
+		// }
+		//
+		// function validate() {
+		// 	const nameValue = name.value;
+		//
+		// 	if (validateName(nameValue) && nameValue.length > 5) {
+		// 		name.parentElement.classList.remove('invalid')
+		// 	} else {
+		// 		name.parentElement.classList.add('invalid')
+		// 	}
+		// 	return false;
+		// }
+		//
+		// validate();
 
-		function validateName(nameValue) {
-			const re = /[.*+?^${}()|[\]\\]/g;
-			console.log(nameValue)
-			return re.test(nameValue);
+		let nameValue = name.value;
+
+		if (nameValue !== '' && nameValue.length >= 5) {
+			name.parentElement.classList.remove('invalid')
+		} else {
+			name.parentElement.classList.add('invalid')
 		}
-
-		function validate() {
-			const nameValue = name.value;
-
-			if (validateName(nameValue) && nameValue.length > 5) {
-				name.parentElement.classList.remove('invalid')
-			} else {
-				name.parentElement.classList.add('invalid')
-			}
-			return false;
-		}
-
-		validate();
-
 	}
 
 	if (email !== null) {
@@ -129,37 +145,72 @@ function validationForm() {
 
 	}
 
-	if (textarea !== null) {
-		if (textarea.value !== '') {
-			let textareaValue = textarea.value;
-			validateTextarea(textareaValue);
-			textarea.classList.remove('invalid')
-		} else {
-			textarea.classList.add('invalid')
-			console.log(textarea)
+	// onkeyup validation
+
+	if (password !== null) {
+		if (!password.parentElement.classList.contains('popup__input-login-password')) {
+			let passwordValue = password.value;
+
+			// Validate lowercase letters && Validate capital letters
+
+			let lowerCaseLetters = /[a-z]/g;
+			let upperCaseLetters = /[A-Z]/g;
+
+			if (passwordValue.match(lowerCaseLetters) && passwordValue.match(upperCaseLetters)) {
+				if (this.closest('.popup__form').querySelector('.letters-rule') !== null) {
+					this.closest('.popup__form').querySelector('.letters-rule').querySelector('.popup__step-item-radio').classList.add('_checked');
+				}
+			} else {
+				if (this.closest('.popup__form').querySelector('.letters-rule') !== null) {
+					this.closest('.popup__form').querySelector('.letters-rule').querySelector('.popup__step-item-radio').classList.remove('_checked');
+				}
+			}
+
+
+			// Validate numbers
+			let numbers = /[0-9]/g;
+			if (passwordValue.match(numbers)) {
+				if (this.closest('.popup__form').querySelector('.number-rule') !== null) {
+					this.closest('.popup__form').querySelector('.number-rule').querySelector('.popup__step-item-radio').classList.add('_checked');
+				}
+			} else {
+				if (this.closest('.popup__form').querySelector('.number-rule') !== null) {
+					this.closest('.popup__form').querySelector('.number-rule').querySelector('.popup__step-item-radio').classList.remove('_checked');
+				}
+			}
+
+			// Validate length
+			if (passwordValue.length >= 8) {
+				if (this.closest('.popup__form').querySelector('.length-rule') !== null) {
+					this.closest('.popup__form').querySelector('.length-rule').querySelector('.popup__step-item-radio').classList.add('_checked');
+				}
+			} else {
+				if (this.closest('.popup__form').querySelector('.length-rule') !== null) {
+					this.closest('.popup__form').querySelector('.length-rule').querySelector('.popup__step-item-radio').classList.remove('_checked');
+				}
+			}
 		}
 	}
 
-}
+	if (textarea !== null) {
+		let textareaValue = textarea.value;
 
-// function validateName(name) {
-// 	const re = (/[.*+?^${}()|[\]\\]/g, '\\$&');
-// 	return re.test(name);
-// }
+		if (textareaValue !== '' && textareaValue.length >= 6) {
+			textarea.classList.remove('invalid')
+		} else {
+			textarea.classList.add('invalid')
+		}
+	}
 
-// function validateEmail(email) {
-// 	const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-// 	return re.test(email);
-// }
+	let allInputs = form.querySelectorAll('.popup__input');
 
-function validatePassword(password) {
-	// const re = (/[.*+?^${}()|[\]\\]/g, '\\$&');
-	// return re.test(password);
-}
-
-function validateTextarea(textarea) {
-	// const re
-	// return re.test(textarea);
+	if (this.closest('.js__popup').classList.contains('popup-login')) {
+		[].forEach.call(allInputs, function (e) {
+			if (e.classList.contains('invalid')) {
+				wrongInfo.classList.add('_active');
+			}
+		})
+	}
 }
 
 

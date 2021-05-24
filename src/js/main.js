@@ -319,27 +319,6 @@ window.onload = function () {
 
 	// popup close end
 
-	// input focus start
-
-	let inputs = document.querySelectorAll('.popup__input');
-
-	[].forEach.call(inputs, function (e) {
-		e.addEventListener('click', moveTitle, false)
-	});
-
-	function moveTitle() {
-		if (this.value == '') {
-			this.querySelector('.popup__input-title').classList.remove('js_title_to_top');
-		} else if (this.value !== '') {
-			this.querySelector('.popup__input-title').classList.add('js_title_to_top');
-		}
-		if (this.classList.contains('js_create_password')) {
-			this.querySelector('.popup__steps').classList.add('_active');
-		}
-	}
-
-// input focus end
-
 	// password show start
 
 	let showPasswordBtn = document.querySelectorAll('.popup__input-ico--show');
@@ -351,7 +330,7 @@ window.onload = function () {
 
 	[].forEach.call(hiddenPasswordBtn, function (e) {
 		e.addEventListener('click', hiddenPassword, false);
-	})
+	});
 
 
 	function showPassword() {
@@ -368,5 +347,53 @@ window.onload = function () {
 
 	// password show end
 
+
+	// input focus start
+
+	let inputs = document.querySelectorAll('input');
+
+	[].forEach.call(inputs, function (e) {
+		e.addEventListener('click', moveTitleUp, false)
+	});
+
+	[].forEach.call(inputs, function (e) {
+		e.addEventListener('blur', moveTitleDown, false)
+	});
+
+
+	function moveTitleUp() {
+		this.closest('.popup__input').querySelector('.popup__input-title').classList.add('js_title_to_top');
+
+		if (this.closest('.popup__input').querySelector('input[type="password"]') !== null && this.closest('.popup__input').querySelector('input[type="password"]').classList.contains('js_validation_password')) {
+			if (this.closest('.popup__body').querySelector('.popup__steps') !== null) {
+				this.closest('.popup__body').querySelector('.popup__steps').classList.add('_active');
+			}
+		}
+	}
+
+	function moveTitleDown() {
+		if (this.value == '') {
+			this.closest('.popup__input').querySelector('.popup__input-title').classList.remove('js_title_to_top');
+		}
+	}
+
+// input focus end
+
+
+	// password rules show-hidden start
+
+	let inputsPassword = document.querySelectorAll("input[type = 'password']");
+
+	[].forEach.call(inputsPassword, function (e) {
+		e.addEventListener('blur', hiddenRules, false);
+	})
+
+	function hiddenRules() {
+		if (this.closest('.popup__body').querySelector('.popup__steps') !== null) {
+			this.closest('.popup__body').querySelector('.popup__steps').classList.remove('_active');
+		}
+	}
+
+	// password rules show-hidden end
 
 }

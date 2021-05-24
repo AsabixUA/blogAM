@@ -221,7 +221,9 @@
 		max-width: 445px;
 		margin-top: 90px;
 		border-bottom: 1px solid #000;
-
+		@include for-680 {
+			max-width: 320px;
+		}
 
 		input {
 			background-color: transparent;
@@ -520,6 +522,7 @@
 		border-radius: 50%;
 		border: 1px solid #000;
 		padding: 3px;
+
 		&._checked {
 			&:after {
 				position: absolute;

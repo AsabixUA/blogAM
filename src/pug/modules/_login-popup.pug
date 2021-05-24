@@ -1,23 +1,23 @@
 .popup-login.js__popup.popup-container
-	.popup.popup--login
-		.popup__body
-			.popup__inner
-				.popup__close
-					.popup__close-ico.js_popup_button_close
-						include ../../img/ico/close-ico.svg
-				.popup__content.row
-					.popup__title LOG IN
-					form(action="javascript:void(0)").popup__form
-						.popup__input
-							input(type='email').js_validation_email
-							.popup__input-title.show Type your email address
-						.popup__input
-							input(type='password').js_validation_password
-							.popup__input-ico.popup__input-ico--hidden._active
-								include ../../img/ico/viewes-ico--hidden.svg
-							.popup__input-ico.popup__input-ico--show
-								include ../../img/ico/viewes-ico.svg
-							.popup__input-title.show Type your password
-						.popup__wrong-field._active Login with wrong email or password
-						button(type='submit').popup__btn.white.js_submit_form LOG IN
-						.popup__info.js_reset_popup Forgot your password?
+    .popup.popup--login
+        .popup__body
+            .popup__inner
+                .popup__close
+                    .popup__close-ico.js_popup_button_close
+                        include ../../img/ico/close-ico.svg
+                .popup__content.row
+                    .popup__title LOG IN
+                    form(action="javascript:void(0)").popup__form
+                        .popup__input
+                            input(type='email').js_validation_email
+                            .popup__input-title.show Type your email address
+                        .popup__input.popup__input-login-password
+                            input(type='password').js_validation_password
+                            .popup__input-ico.popup__input-ico--hidden._active
+                                include ../../img/ico/viewes-ico--hidden.svg
+                            .popup__input-ico.popup__input-ico--show
+                                include ../../img/ico/viewes-ico.svg
+                            .popup__input-title.show Type your password
+                        .popup__wrong-field Login with wrong email or password
+                        button(type='submit').popup__btn.white.js_submit_form LOG IN
+                        .popup__info.js_reset_popup Forgot your password?
