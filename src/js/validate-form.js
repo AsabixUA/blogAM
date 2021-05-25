@@ -6,7 +6,6 @@ let comentSubmitBtn = document.querySelectorAll('.js_comment_submit');
 	e.addEventListener('click', checkValue, false)
 });
 
-
 function checkValue() {
 
 	if (this.previousElementSibling.children[0].value !== '') {
@@ -15,7 +14,6 @@ function checkValue() {
 	} else {
 		this.previousElementSibling.style.borderColor = 'red';
 	}
-
 }
 
 // add comment start
@@ -73,24 +71,6 @@ function validationForm() {
 
 
 	if (name !== null) {
-		//
-		// function validateName(nameValue) {
-		// 	const re = /[.*+?^${}()|[\]\\]/g;
-		// 	return re.test(nameValue);
-		// }
-		//
-		// function validate() {
-		// 	const nameValue = name.value;
-		//
-		// 	if (validateName(nameValue) && nameValue.length > 5) {
-		// 		name.parentElement.classList.remove('invalid')
-		// 	} else {
-		// 		name.parentElement.classList.add('invalid')
-		// 	}
-		// 	return false;
-		// }
-		//
-		// validate();
 
 		let nameValue = name.value;
 
@@ -121,8 +101,8 @@ function validationForm() {
 
 		validate();
 	}
-
-	if (password !== null) {
+	// console.log(this.closest('.popup-login'))
+	if (password !== null && !this.closest('.popup-login')) {
 		let passwordValue = password.value;
 
 		function validateEmail(passwordValue) {
@@ -205,12 +185,14 @@ function validationForm() {
 
 	let allInputs = form.querySelectorAll('.popup__input');
 
-	if (this.closest('.js__popup').classList.contains('popup-login')) {
-		[].forEach.call(allInputs, function (e) {
-			if (e.classList.contains('invalid')) {
-				wrongInfo.classList.add('_active');
-			}
-		})
+	if (this.closest('.js__popup')) {
+		if (this.closest('.js__popup').classList.contains('popup-login')) {
+			[].forEach.call(allInputs, function (e) {
+				if (e.classList.contains('invalid')) {
+					wrongInfo.classList.add('_active');
+				}
+			})
+		}
 	}
 }
 

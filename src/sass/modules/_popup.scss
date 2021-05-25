@@ -49,7 +49,7 @@
 	&__content {
 		height: 100%;
 		width: 100%;
-		margin: 0;
+		margin: 0 !important;
 		padding: 0;
 
 		@include for-800 {
@@ -73,7 +73,7 @@
 			opacity: .7;
 		}
 
-		@include for-800 {
+		@include for-992 {
 			right: 30px;
 			top: 30px;
 		}
@@ -81,14 +81,14 @@
 
 	&__close-ico {
 		&.desktop-close {
-			@include for-800 {
+			@include for-992 {
 				display: none;
 			}
 		}
 
 		&.mobile-close {
 			display: none;
-			@include for-800 {
+			@include for-992 {
 				display: block;
 			}
 		}
@@ -222,7 +222,7 @@
 		margin-top: 90px;
 		border-bottom: 1px solid #000;
 		@include for-680 {
-			max-width: 320px;
+			//max-width: 320px;
 		}
 
 		input {
@@ -387,6 +387,7 @@
 
 		@include for-680 {
 			min-width: unset;
+			width: 100%;
 			padding: 18px 64px;
 		}
 	}
@@ -474,6 +475,9 @@
 			background-color: #262626;
 			color: #fff;
 		}
+		@include for-800{
+			flex: 1 1 100% !important;
+		}
 	}
 
 	&__steps {
@@ -545,7 +549,11 @@
 
 	&.popup--reset {
 		background-color: #FFFFFF;
+		.popup__inner{
+			padding: 0 15px;
+		}
 	}
+
 
 	&.popup--register {
 		background-color: #262626;
