@@ -1,6 +1,13 @@
 .footer {
 	background-color: #262626;
 
+	.container-fluid{
+		@include for-992 {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+
 	&__inner {
 		padding: 56px 0 20px;
 	}
@@ -191,6 +198,8 @@
 	&__partner {
 		position: relative;
 		@include for-800 {
+			width: 100% !important;
+			flex: 1 1 100%;
 			//margin-top: 50px;
 		}
 		@include for-680 {
@@ -269,6 +278,9 @@
 		//	margin-right: 0;
 		//}
 
+		@include for-800 {
+			margin: 10px;
+		}
 		@include for-680 {
 			margin: 10px 6px;
 		}

@@ -43,9 +43,24 @@
   @media (min-width: 801px) { @content; }
 }
 
+@mixin for-850 {
+  @media (max-width: 850px) { @content; }
+}
+@mixin from-850 {
+  @media (min-width: 851px) { @content; }
+}
+
+@mixin from-990 {
+  @media (min-width: 991px) { @content; }
+}
+@mixin for-990 {
+  @media (max-width: 991px) { @content; }
+}
+
 @mixin for-992 {
   @media (max-width: 992px) { @content; }
 }
+
 @mixin from-992 {
   @media (min-width: 993px) { @content; }
 }

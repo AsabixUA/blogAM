@@ -5,6 +5,13 @@
 .header {
 	z-index: 100;
 
+	.container-fluid {
+		@include for-800 {
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+
 	&__inner {
 		display: flex;
 		justify-content: space-between;
@@ -38,6 +45,7 @@
 	}
 
 	&__logo {
+		z-index: 99;
 		max-width: 80px;
 		max-height: 80px;
 		@include for-750 {
@@ -95,6 +103,7 @@
 
 	&__lang-list {
 		position: absolute;
+		z-index: 99;
 		top: 75px;
 		opacity: 0;
 		visibility: hidden;
@@ -129,10 +138,15 @@
 			margin: 0;
 			margin-right: 10px;
 		}
+
+		&:hover {
+			color: #000;
+		}
 	}
 
 	&__menu-lang--mobile {
 		display: none;
+		z-index: 99;
 		max-width: 60px;
 		margin-right: 58px;
 		@include for-680 {
@@ -160,6 +174,7 @@
 
 	&__btn-menu {
 		display: none;
+		z-index: 99;
 		justify-content: flex-end;
 		width: 34px;
 		height: 32px;
@@ -209,7 +224,7 @@
 
 		a {
 			position: absolute;
-			z-index: 5;
+			z-index: 10;
 			top: 0;
 			left: 0;
 			width: 100%;
@@ -222,13 +237,21 @@
 	}
 
 	&__content {
+		position: relative;
 		display: flex;
 		align-items: flex-end;
+		justify-content: space-between;
 		margin-top: -30px;
+		min-height: 532px;
 
-		@include for-550 {
+		@include for-1100 {
+			min-height: 265px !important;
+		}
+
+		@include for-680 {
 			flex-direction: column-reverse;
 			margin-top: 0;
+			min-height: 265px;
 		}
 
 	}
@@ -237,7 +260,7 @@
 		font-family: 'FiraSansExtraCondensed-Bold', sans-serif;
 		text-transform: uppercase;
 
-		@include for-550 {
+		@include for-680 {
 			position: relative;
 			background-color: #000;
 			z-index: 3;
@@ -261,19 +284,19 @@
 		}
 
 		.site-title__large.move-right {
-			transform: scaleX(1.1) translateX(30px);
+			white-space: nowrap;
+			overflow: hidden;
+			width: 100%;
 
 			@include for-800 {
-				transform: unset;
 			}
 			@include for-550 {
-				transform: unset;
 				font-size: 66px;
 				line-height: 85px;
 			}
 		}
 
-		@include for-550 {
+		@include for-680 {
 			background-color: #000;
 			color: #fff;
 		}
@@ -294,17 +317,25 @@
 				z-index: -1;
 				top: 0;
 				left: 0;
-				width: 150%;
+				right: 0;
+				width: 143%;
 				height: 100%;
 				background-color: #000;
 
+				@include for-992 {
+					width: 140%;
+				}
 
-				@include for-550 {
+				@include for-750 {
+					width: 130%;
+				}
+
+				@include for-680 {
 					display: none;
 				}
 			}
 
-			@include for-550 {
+			@include for-680 {
 				//	position: absolute;
 				//	top: -100%;
 				//	right: 0;
@@ -314,7 +345,7 @@
 			}
 		}
 
-		@include for-550 {
+		@include for-680 {
 			top: -20px;
 			position: absolute;
 			right: 0;
@@ -325,7 +356,20 @@
 		z-index: 2;
 
 		img {
-			@include for-550 {
+			position: absolute;
+			z-index: 5;
+			bottom: -1px;
+			right: 0;
+			width: 35vw;
+			height: auto;
+			//max-width: 532px;
+			max-height: 513px;
+			@include for-750 {
+				width: 25vw;
+			}
+			@include for-680 {
+				position: unset;
+				width: 100%;
 				transform: scale(1.2);
 				margin-top: 16px;
 			}
@@ -644,6 +688,7 @@
 			}
 		}
 
+
 		@include for-680 {
 			display: none;
 			margin-bottom: 0;
@@ -667,6 +712,10 @@
 			font-size: 96px;
 			line-height: 96px;
 			text-transform: uppercase;
+			@include for-800 {
+				font-size: 72px;
+				line-height: 72px;
+			}
 			@include for-680 {
 				font-size: 48px;
 				line-height: 48px;
@@ -689,6 +738,10 @@
 			color: #fff;
 			text-transform: uppercase;
 			background-color: #F20303;
+			@include for-800 {
+				font-size: 56px;
+				line-height: 56px;
+			}
 			@include for-680 {
 				font-size: 36px;
 				line-height: 36px;
@@ -1743,6 +1796,14 @@
 					}
 				}
 			}
+		}
+
+		@include for-1200 {
+			bottom: -60px;
+		}
+
+		@include for-850 {
+			//left: -25px;
 		}
 
 		@include for-800 {
