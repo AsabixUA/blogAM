@@ -81,7 +81,7 @@ function validationForm() {
 		}
 	}
 
-	if (email !== null) {
+	if (email !== null && !this.closest('.popup-login')) {
 
 		function validateEmail(emailValue) {
 			const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
