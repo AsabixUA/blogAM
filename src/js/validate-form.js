@@ -39,7 +39,7 @@ let formSubmitBtn = document.querySelectorAll('.js_submit_form');
 
 let inputEmail = document.querySelectorAll('input[type=email]');
 let inputPassword = document.querySelectorAll('input[type=password]');
-let inputText = document.querySelectorAll('input[type=text]');
+let inputText = document.querySelectorAll('input[type=text][class]');
 let textareaField = document.querySelectorAll('textarea');
 
 [].forEach.call(formSubmitBtn, function (e) {
