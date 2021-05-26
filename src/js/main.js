@@ -352,30 +352,33 @@ window.onload = function () {
 
 	// input focus start
 
-	let inputs = document.querySelectorAll('input');
+	let inputs = document.querySelectorAll('input[class]');
 
-	[].forEach.call(inputs, function (e) {
-		e.addEventListener('click', moveTitleUp, false)
-	});
+	if (inputs.length) {
+		[].forEach.call(inputs, function (e) {
+			e.addEventListener('click', moveTitleUp, false)
+		});
 
-	[].forEach.call(inputs, function (e) {
-		e.addEventListener('blur', moveTitleDown, false)
-	});
+		[].forEach.call(inputs, function (e) {
+			e.addEventListener('blur', moveTitleDown, false)
+		});
 
+		function moveTitleUp() {
+			if (this.closest('.popup__input')) {
+				this.closest('.popup__input').querySelector('.popup__input-title').classList.add('js_title_to_top');
 
-	function moveTitleUp() {
-		this.closest('.popup__input').querySelector('.popup__input-title').classList.add('js_title_to_top');
-
-		if (this.closest('.popup__input').querySelector('input[type="password"]') !== null && this.closest('.popup__input').querySelector('input[type="password"]').classList.contains('js_validation_password')) {
-			if (this.closest('.popup__body').querySelector('.popup__steps') !== null) {
-				this.closest('.popup__body').querySelector('.popup__steps').classList.add('_active');
+				if (this.closest('.popup__input').querySelector('input[type="password"]') !== null && this.closest('.popup__input').querySelector('input[type="password"]').classList.contains('js_validation_password')) {
+					if (this.closest('.popup__body').querySelector('.popup__steps') !== null) {
+						this.closest('.popup__body').querySelector('.popup__steps').classList.add('_active');
+					}
+				}
 			}
 		}
-	}
 
-	function moveTitleDown() {
-		if (this.value == '') {
-			this.closest('.popup__input').querySelector('.popup__input-title').classList.remove('js_title_to_top');
+		function moveTitleDown() {
+			if (this.value == '') {
+				this.closest('.popup__input').querySelector('.popup__input-title').classList.remove('js_title_to_top');
+			}
 		}
 	}
 
@@ -397,5 +400,29 @@ window.onload = function () {
 	}
 
 	// password rules show-hidden end
+
+	// lightbox start
+
+	let images = document.querySelectorAll('.lightbox');
+
+	if (images.length) {
+		images.forEach(e => {
+			e.addEventListener('click', function () {
+				let src = this.getAttribute("src");
+				basicLightbox.create('<img src = "' + src + '">').show()
+			}, false)
+		});
+
+	}
+
+	// lightbox end
+
+	//video player start
+	let videoPlayers = document.querySelectorAll('#video_player')
+
+	if (videoPlayers.length) {
+		const players = Array.from(videoPlayers).map(p => new Plyr(p));
+	}
+	//video player end
 
 }

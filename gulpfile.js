@@ -66,6 +66,7 @@ gulp.task('js', () => {
 gulp.task('css-libs', () => {
   return gulp.src([
       'node_modules/normalize.css/normalize.css',
+      'node_modules/basiclightbox/dist/basicLightbox.min.css',
       // 'node_modules/bootstrap/dist/css/bootstrap-grid.css',
       'node_modules/swiper/swiper-bundle.css',
   ])
@@ -81,6 +82,7 @@ gulp.task('js-libs', () => {
       'node_modules/lazysizes/lazysizes.js',
       'node_modules/lazysizes/plugins/parent-fit/ls.parent-fit.js',
       'node_modules/swiper/swiper-bundle.js',
+      'node_modules/basiclightbox/dist/basicLightbox.min.js',
     ])
     .pipe(gulp.dest('dist/js/libs/'))
      .pipe(uglify())
