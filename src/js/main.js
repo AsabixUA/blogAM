@@ -367,7 +367,9 @@ window.onload = function () {
 			if (this.closest('.popup__input')) {
 				this.closest('.popup__input').querySelector('.popup__input-title').classList.add('js_title_to_top');
 
-				if (this.closest('.popup__input').querySelector('input[type="password"]') !== null && this.closest('.popup__input').querySelector('input[type="password"]').classList.contains('js_validation_password')) {
+				if (this.closest('.popup__input').querySelector('input[type="password"]') !== null
+						&& this.closest('.popup__input').querySelector('input[type="password"]').classList.contains('js_validation_password')) {
+
 					if (this.closest('.popup__body').querySelector('.popup__steps') !== null) {
 						this.closest('.popup__body').querySelector('.popup__steps').classList.add('_active');
 					}
