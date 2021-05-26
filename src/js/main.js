@@ -379,7 +379,9 @@ window.onload = function () {
 
 		function moveTitleDown() {
 			if (this.value == '') {
-				this.closest('.popup__input').querySelector('.popup__input-title').classList.remove('js_title_to_top');
+				if (this.closest('.popup__input')) {
+					this.closest('.popup__input').querySelector('.popup__input-title').classList.remove('js_title_to_top');
+				}
 			}
 		}
 	}
