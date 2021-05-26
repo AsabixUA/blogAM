@@ -2,6 +2,20 @@ window.onload = function () {
 	let pageClass = document.querySelector('body');
 	//disable scroll body start
 
+	// active page start
+
+	// let urlOfWindow = window.location.href;
+	// console.log(urlOfWindow)
+	//
+	// let links = document.querySelectorAll('.header__nav-item');
+	//
+	// [].forEach.call(links, function (e){
+	// 	let linkPage = e.querySelector('a').getAttribute('href');
+	// 	console.log(e)
+	// })
+
+	// active page end
+
 	let body = document.querySelector('body');
 	let disableScrollClass = 'disable-scroll';
 

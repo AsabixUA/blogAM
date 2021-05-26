@@ -342,6 +342,8 @@ body.disable-scroll {
 	text-transform: uppercase;
 	transition: .3s;
 
+	padding: 15px 0;
+
 	&--red {
 		color: #fff;
 		background-color: #F20303;
@@ -358,7 +360,7 @@ body.disable-scroll {
 				background-color: #fff;
 				color: #000;
 				border: 1px solid #000;
-				box-shadow: 0 0 5px 0 #000;
+				//box-shadow: 0 0 5px 0 #000;
 			}
 		}
 	}
