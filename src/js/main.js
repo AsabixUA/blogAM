@@ -1,5 +1,5 @@
 window.onload = function () {
-	let pageClass = document.querySelector('body');
+	let bodyElement = document.querySelector('body');
 	//disable scroll body start
 
 	// active page start
@@ -11,9 +11,32 @@ window.onload = function () {
 
 	[].forEach.call(links, function (e) {
 		let linkPage = e.querySelector('a').getAttribute('href');
+
 		if (lastURLSegment == linkPage) {
 			e.classList.add('_active')
 		}
+
+		if (bodyElement.classList.contains('article-page')) {
+			let urlEle = e.querySelector("a[href = './articles.html']")
+			if (urlEle) {
+				e.classList.add('_active');
+			}
+		}
+
+		if (bodyElement.classList.contains('video-article-page')) {
+			let urlEle = e.querySelector("a[href = './video.html']");
+			if (urlEle) {
+				e.classList.add('_active');
+			}
+		}
+
+		if (bodyElement.classList.contains('photo-article-page')) {
+			let urlEle = e.querySelector("a[href = './photo.html']");
+			if (urlEle) {
+				e.classList.add('_active');
+			}
+		}
+
 	})
 
 	// active page end
@@ -76,10 +99,10 @@ window.onload = function () {
 
 	// filter input start
 
-	if (pageClass.classList.contains('articlespage') ||
-			pageClass.classList.contains('photopage') ||
-			pageClass.classList.contains('searchpage') ||
-			pageClass.classList.contains('videopage')) {
+	if (bodyElement.classList.contains('articlespage') ||
+			bodyElement.classList.contains('photopage') ||
+			bodyElement.classList.contains('searchpage') ||
+			bodyElement.classList.contains('videopage')) {
 
 
 		let filterYearsOpenBtn = document.querySelector('.js_filter_years_btn')
@@ -99,7 +122,7 @@ window.onload = function () {
 		}
 	}
 
-	if (pageClass.classList.contains('searchpage')) {
+	if (bodyElement.classList.contains('searchpage')) {
 
 		let filterTypesOpenBtn = document.querySelector('.js_filter_types_btn')
 		let filterTypesItemList = document.querySelector('.js_filter_types_list')
@@ -115,10 +138,10 @@ window.onload = function () {
 
 	// mobile filter start
 
-	if (pageClass.classList.contains('articlespage') ||
-			pageClass.classList.contains('videopage') ||
-			pageClass.classList.contains('searchpage') ||
-			pageClass.classList.contains('photopage')) {
+	if (bodyElement.classList.contains('articlespage') ||
+			bodyElement.classList.contains('videopage') ||
+			bodyElement.classList.contains('searchpage') ||
+			bodyElement.classList.contains('photopage')) {
 
 		let filterBtnOpen = document.querySelector('.filter-icon');
 		let filterBtnSection = document.querySelector('.section__filter-btn--mobile');
@@ -177,9 +200,9 @@ window.onload = function () {
 
 	//slider main page start
 
-	if (pageClass.classList.contains('homepage')) {
+	if (bodyElement.classList.contains('homepage')) {
 		const swiper = new Swiper('.swiper-container', {
-
+			spaceBetween: 70,
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
@@ -223,7 +246,7 @@ window.onload = function () {
 	// search page filter start
 
 
-	if (pageClass.classList.contains('searchpage')) {
+	if (bodyElement.classList.contains('searchpage')) {
 		let filterTypes = document.querySelector('.js_filter_types_search_page');
 		filterTypes.classList.add('_active');
 	}

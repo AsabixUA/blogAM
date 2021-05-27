@@ -72,6 +72,19 @@
 			color: #fff;
 			width: 100%;
 			padding: 15px 0;
+
+
+			&::-webkit-search-cancel-button {
+				position: relative;
+				right: 0;
+				width: 15px;
+				height: 15px;
+				background-image: url("../../img/ico/close-ico--white.svg");
+				background-repeat: no-repeat;
+				background-size: 15px;
+				-webkit-appearance: none;
+				cursor: pointer;
+			}
 		}
 
 		border-bottom: 1px solid #959595;
