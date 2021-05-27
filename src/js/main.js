@@ -424,11 +424,24 @@ window.onload = function () {
 	// lightgallery start
 
 	lightGallery(document.getElementById('lightgallery'), {
-		// plugins: [lgZoom, lgThumbnail],
+		plugins: [lgZoom, lgThumbnail, lgShare],
 		speed: 500,
 		showZoomInOutIcons: true,
 		actualSize: false,
+		thumbnail: true,
 	});
+
+	lightGallery(document.getElementById('static-thumbnails'), {
+		animateThumb: false,
+		zoomFromOrigin: false,
+		allowMediaOverlap: true,
+		toggleThumb: true,
+	});
+
+	lightGallery(document.getElementById('gallery-hash-demo'), {
+		customSlideName: true,
+	});
+
 
 	// lightgallery  end
 
