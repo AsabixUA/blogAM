@@ -16,7 +16,7 @@
 		display: flex;
 		justify-content: space-between;
 		padding: 40px 0 30px;
-		padding-bottom: ;
+		padding-bottom: 0;
 		@include for-750 {
 			padding: 16px 0;
 		}
@@ -551,7 +551,7 @@
 			}
 		}
 
-		@include for-680{
+		@include for-680 {
 			margin-bottom: 0;
 		}
 	}
@@ -1548,6 +1548,7 @@
 
 		@include for-680 {
 			margin: 0;
+			padding: 0;
 		}
 	}
 
@@ -1564,7 +1565,7 @@
 	&__body {
 		max-width: 865px;
 		width: 100%;
-		@include for-680{
+		@include for-680 {
 			padding: 0;
 		}
 	}
@@ -1701,6 +1702,7 @@
 
 		@include for-800 {
 			margin-bottom: 8px;
+			padding: 0;
 		}
 	}
 
@@ -1836,7 +1838,8 @@
 			&:hover {
 				color: #F20303;
 			}
-			@include for-680{
+
+			@include for-680 {
 				font-size: 18px;
 				line-height: 23px;
 				margin-right: 15px;
