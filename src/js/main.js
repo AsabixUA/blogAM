@@ -481,10 +481,8 @@ window.onload = function () {
 	let btnPartner = document.querySelectorAll('.footer__partner-item');
 
 	[].forEach.call(btnPartner, function (element) {
-		// e.addEventListener('mouseenter', showTippy, false)
 
 		let tooltip = element.querySelector('.footer__partner-info');
-		console.log('tooltip', tooltip);
 
 		tooltip.style.display = 'block';
 
