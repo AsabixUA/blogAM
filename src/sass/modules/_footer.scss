@@ -1,7 +1,7 @@
 .footer {
 	background-color: #262626;
 
-	.container-fluid{
+	.container-fluid {
 		@include for-992 {
 			max-width: 100%;
 			width: 100%;
@@ -194,6 +194,10 @@
 
 	}
 
+	.tooltip-item {
+		background: red;
+	}
+
 	&__partner {
 		position: relative;
 		@include for-800 {
@@ -324,4 +328,50 @@
 		color: #959595;
 
 	}
+
+	&__partner-info {
+		display: none;
+		flex-direction: column;
+		max-width: 250px;
+		padding: 15px;
+	}
+
+	&__partner-info-text {
+		margin-bottom: 15px;
+
+		h2 {
+			font-size: 24px;
+			font-family: 'FiraSansExtraCondensed-Medium', sans-serif;
+			line-height: 24px;
+			margin-bottom: 12px;
+		}
+
+		p {
+			font-size: 16px;
+			font-family: 'FiraSansExtraCondensed-Regular', sans-serif;
+			line-height: 20px;
+		}
+	}
+
+	&__partner-info-ico {
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+
+		svg {
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+}
+
+.tippy-box{
+	background-color: #fff !important;
+	color: black !important;
+	border-radius: 10px!important;
+	border: 1px solid #000;
+}
+.tippy-arrow{
+	color: #fff;
 }

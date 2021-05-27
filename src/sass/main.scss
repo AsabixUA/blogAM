@@ -49,7 +49,7 @@
 		z-index: 99;
 		max-width: 80px;
 		max-height: 80px;
-		@include for-750 {
+		@include for-800 {
 			max-width: 40px;
 			max-height: 40px;
 
@@ -72,8 +72,10 @@
 		}
 
 		&:last-child {
-			padding-right: 0;
-			align-self: center;
+			//padding-right: 0;
+			//align-self: center;
+			padding-top: 5px !important;
+
 		}
 
 		a {
@@ -259,15 +261,34 @@
 		justify-content: space-between;
 		margin-top: -30px;
 		min-height: 532px;
+		overflow: hidden;
 
+		@include for-1400 {
+			min-height: 470px !important;
+		}
+		@include for-1200 {
+			min-height: 400px !important;
+		}
 		@include for-1100 {
-			min-height: 265px !important;
+			min-height: 370px !important;
+			margin-top: -90px;
+		}
+
+		@include for-992 {
+			min-height: 340px !important;
 		}
 
 		@include for-680 {
 			flex-direction: column-reverse;
 			margin-top: 0;
 			min-height: 265px;
+			padding-top: 25px;
+		}
+		@include for-420 {
+			flex-direction: column-reverse;
+			margin-top: 0;
+			min-height: 265px;
+			padding-top: 15px;
 		}
 
 	}
@@ -281,7 +302,7 @@
 			background-color: #000;
 			z-index: 3;
 			width: 100%;
-			padding: 48px 13px 0;
+			padding: 30px 13px 0;
 		}
 	}
 
@@ -317,6 +338,7 @@
 			background-color: #000;
 			color: #fff;
 			text-align: center;
+			margin-bottom: 0;
 		}
 	}
 
@@ -329,40 +351,38 @@
 			z-index: 1;
 			padding-left: 30px;
 
-			&:before {
-				content: '';
-				position: absolute;
-				z-index: -1;
-				top: 0;
-				left: 0;
-				right: 0;
-				width: 143%;
-				height: 100%;
-				background-color: #000;
-
-				@include for-1300 {
-					width: 175%;
-				}
-				@include for-992 {
-					width: 150%;
-				}
-
-				@include for-750 {
-					width: 130%;
-				}
-
-				@include for-680 {
-					display: none;
-				}
-			}
-
 			@include for-680 {
-				//	position: absolute;
-				//	top: -100%;
-				//	right: 0;
 				background-color: #fff;
 				color: #000;
-				padding: 3px 14px 9px 3px;
+				padding: 3px 14px 3px 3px;
+			}
+		}
+
+
+		span {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 1000%;
+			height: 100%;
+			background-color: #000;
+
+			//@include for-1300 {
+			//	width: 175%;
+			//}
+			//@include for-992 {
+			//	width: 150%;
+			//}
+			//
+			//@include for-750 {
+			//	width: 130%;
+			//}
+
+			@include for-680 {
+				display: none;
 			}
 		}
 
@@ -379,7 +399,7 @@
 		img {
 			position: absolute;
 			z-index: 5;
-			bottom: -1px;
+			bottom: 0;
 			right: 0;
 			width: 35vw;
 			height: auto;
@@ -608,7 +628,7 @@
 		input {
 			font-family: 'FiraSansExtraCondensed-Medium', sans-serif;
 			font-size: 18px;
-			color: #959595;
+			color: #000;
 			padding: 9px 20px;
 			min-width: 430px;
 			width: 100%;
@@ -1564,6 +1584,7 @@
 	}
 
 	&__body {
+		margin-top: 30px;
 		max-width: 865px;
 		width: 100%;
 		@include for-680 {
@@ -1735,13 +1756,12 @@
 	&__subtitle--red {
 		background-color: red;
 		padding-left: 15px;
-		text-align: justify;
 		text-transform: uppercase;
+		margin-top: -30px;
 
 		h2 {
 			font-size: 48px;
 			line-height: 60px;
-			text-align: justify;
 			color: #fff;
 			@include for-800 {
 				font-size: 18px;
@@ -1944,10 +1964,15 @@
 
 		@include for-800 {
 			display: block;
-		}
-		@include for-680 {
 			top: 110px;
 		}
+		//@include for-750 {
+		//	display: block;
+		//	top: 110px;
+		//}
+		//@include for-680 {
+		//	top: 110px;
+		//}
 	}
 
 	&__comments {
@@ -1972,6 +1997,7 @@
 
 	&__comments-title {
 		display: flex;
+		align-items: center;
 	}
 
 	&__comments-title-ico {
@@ -1985,6 +2011,7 @@
 		line-height: 30px;
 		text-transform: capitalize;
 		color: #000000;
+		text-align: center;
 		@include for-680 {
 			font-size: 18px;
 			line-height: 22px;

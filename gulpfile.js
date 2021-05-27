@@ -85,7 +85,8 @@ gulp.task('js-libs', () => {
 		'node_modules/lightgallery/plugins/zoom/lg-zoom.umd.js',
 		'node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.umd.js',
 		'node_modules/lightgallery/plugins/share/lg-share.umd.js',
-			'node_modules/lightgallery/plugins/pager/lg-pager.umd.js',
+		'node_modules/lightgallery/plugins/pager/lg-pager.umd.js',
+		'node_modules/popper.js/dist/popper.js',
 	])
 			.pipe(gulp.dest('dist/js/libs/'))
 			.pipe(uglify())

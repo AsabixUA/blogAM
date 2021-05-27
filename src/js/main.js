@@ -476,4 +476,27 @@ window.onload = function () {
 	}
 	//video player end
 
+	// tippy start
+
+	let btnPartner = document.querySelectorAll('.footer__partner-item');
+
+	[].forEach.call(btnPartner, function (element) {
+		// e.addEventListener('mouseenter', showTippy, false)
+
+		let tooltip = element.querySelector('.footer__partner-info');
+		console.log('tooltip', tooltip);
+
+		tooltip.style.display = 'block';
+
+		tippy(element, {
+			maxWidth: 250,
+			content: tooltip,
+			allowHTML: true,
+			theme: 'light',
+		});
+	})
+
+	// tippy end
+
+
 }
