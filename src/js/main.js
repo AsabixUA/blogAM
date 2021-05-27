@@ -4,15 +4,17 @@ window.onload = function () {
 
 	// active page start
 
-	// let urlOfWindow = window.location.href;
-	// console.log(urlOfWindow)
-	//
-	// let links = document.querySelectorAll('.header__nav-item');
-	//
-	// [].forEach.call(links, function (e){
-	// 	let linkPage = e.querySelector('a').getAttribute('href');
-	// 	console.log(e)
-	// })
+	let pageURL = window.location.href;
+	let lastURLSegment = './' + pageURL.substr(pageURL.lastIndexOf('/') + 1);
+
+	let links = document.querySelectorAll('.js_nav-item');
+
+	[].forEach.call(links, function (e) {
+		let linkPage = e.querySelector('a').getAttribute('href');
+		if (lastURLSegment == linkPage) {
+			e.classList.add('_active')
+		}
+	})
 
 	// active page end
 
@@ -419,21 +421,29 @@ window.onload = function () {
 
 	// password rules show-hidden end
 
-	// lightbox start
+	// lightgallery start
 
-	let images = document.querySelectorAll('.lightbox');
+	lightGallery(document.getElementById('lightgallery'), {
+		plugins: [lgZoom, lgThumbnail, lgShare],
+		speed: 500,
+		showZoomInOutIcons: true,
+		actualSize: false,
+		thumbnail: true,
+	});
 
-	if (images.length) {
-		images.forEach(e => {
-			e.addEventListener('click', function () {
-				let src = this.getAttribute("src");
-				basicLightbox.create('<img src = "' + src + '">').show()
-			}, false)
-		});
+	lightGallery(document.getElementById('static-thumbnails'), {
+		animateThumb: false,
+		zoomFromOrigin: false,
+		allowMediaOverlap: true,
+		toggleThumb: true,
+	});
 
-	}
+	lightGallery(document.getElementById('gallery-hash-demo'), {
+		customSlideName: true,
+	});
 
-	// lightbox end
+
+	// lightgallery  end
 
 	//video player start
 	let videoPlayers = document.querySelectorAll('#video_player')

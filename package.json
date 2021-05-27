@@ -18,6 +18,7 @@
   "homepage": "https://github.com/HiruArt/gulp-assembly#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "lightgallery": "^2.0.1",
     "swiper": "^6.6.1"
   },
   "dependencies": {
