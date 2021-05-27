@@ -42,10 +42,8 @@ html(lang="ru")
 		meta(name="theme-color" content="#ffffff")
 		meta(name='theme-color' content='#ffffff')
 
-		//link(rel='stylesheet', href='./css/libs/bootstrap-grid.min.css?' + cacheFix)
-		//link(rel='stylesheet', href='./css/libs/bootstrap-grid.css?' + cacheFix)
 		link(rel='stylesheet', href='./css/libs/swiper-bundle.min.css?' + cacheFix)
-		link(rel='stylesheet', href='./css/libs/basicLightbox.min.css?' + cacheFix)
+		link(rel='stylesheet', href='./css/libs/lightgallery-bundle.min.css?' + cacheFix)
 		link(rel='stylesheet', href='./css/main.css?' + cacheFix)
 
 	body(class="page " + pageClass)
@@ -74,8 +72,10 @@ html(lang="ru")
 
 		block scripts
 			script(src='./js/libs/lazysizes.min.js')
-			script(src='./js/libs/basicLightbox.min.js')
 			script(src='./js/libs/swiper-bundle.min.js')
+			script(src='./js/libs/lightgallery.umd.min.js')
+			script(src='./js/libs/lg-thumbnail.umd.min.js')
+			script(src='./js/libs/lg-zoom.umd.min.js')
 			script(src='./js/plur.js')
 			script(src='./js/validate-form.js')
 			script(src='./js/main.js?' + cacheFix)

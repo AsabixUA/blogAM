@@ -62,10 +62,6 @@
 		padding: 0 32px 5px;
 		white-space: nowrap;
 
-		&:hover {
-			cursor: pointer;
-		}
-
 		@include for-992 {
 			padding: 0 20px 5px;
 		}
@@ -99,6 +95,21 @@
 
 		&:hover > a:after {
 			width: 30px;
+			cursor: pointer;
+		}
+
+		&._active {
+			a:after {
+				position: absolute;
+				content: '';
+				display: block;
+				width: 30px;
+				height: 3px;
+				background: #000;
+				transition: width .3s;
+				left: 50%;
+				transform: translateX(-50%);
+			}
 		}
 	}
 
@@ -972,9 +983,15 @@
 			line-height: 26px;
 			text-transform: uppercase;
 			margin-right: 14px;
+			transition: .3s;
+
 			@include for-680 {
 				font-size: 18px;
 				line-height: 22px;
+			}
+
+			&:hover {
+				color: #F20303;
 			}
 		}
 	}
@@ -1160,9 +1177,13 @@
 			line-height: 26px;
 			text-transform: uppercase;
 			margin-right: 14px;
+			transition: .3s;
 			@include for-800 {
 				font-size: 18px;
 				line-height: 22px;
+			}
+			&:hover{
+				color: #F20303;
 			}
 		}
 	}
@@ -1486,7 +1507,8 @@
 			justify-content: space-between;
 			padding: 0;
 		}
-		@include for-680{
+
+		@include for-680 {
 			margin: 0;
 		}
 	}
@@ -1742,6 +1764,10 @@
 			text-transform: uppercase;
 
 			color: #000000;
+			transition: .3s;
+			&:hover{
+				color: #F20303;
+			}
 		}
 	}
 
