@@ -140,7 +140,7 @@
 			max-width: 275px;
 			font-size: 14px;
 			line-height: 18px;
-			margin-bottom: 50px;
+			margin-top: 25px;
 		}
 	}
 
@@ -177,16 +177,22 @@
 			padding-right: calc(var(--bs-gutter-x) / 2) !important;
 			padding-left: calc(var(--bs-gutter-x) / 2) !important;
 		}
+		@include for-550 {
+			justify-content: flex-start;
+			width: 100%;
+			margin: unset;
+			max-width: 100% !important;
+		}
 	}
 
 	&__textarea {
 		width: 100%;
-		margin-top: 50px;
+		margin-top: 40px;
 
 		textarea {
 			resize: none;
 			width: 100%;
-			min-width: 328px;
+			//min-width: 328px;
 			min-height: 168px;
 			font-family: 'FiraSansExtraCondensed-Regular', sans-serif;
 			font-size: 18px;
@@ -209,7 +215,7 @@
 			}
 		}
 
-		@include for-680 {
+		@include for-800 {
 			margin-top: 30px;
 		}
 	}
@@ -223,8 +229,12 @@
 		max-width: 445px;
 		margin-top: 90px;
 		border-bottom: 1px solid #000;
-		@include for-680 {
-			//max-width: 320px;
+		@include for-800 {
+			margin-top: 40px;
+		}
+
+		&:first-child {
+			margin-top: 70px;
 		}
 
 		input {
@@ -275,7 +285,9 @@
 		//@include for-680 {
 		//	max-width: 325px;
 		//}
-
+		@include for-550 {
+			max-width: 100%;
+		}
 
 	}
 
@@ -319,6 +331,12 @@
 
 		&.js_title_to_top {
 			top: -40px;
+			@include for-550 {
+
+				top: -25px;
+				font-size: 14px;
+				line-height: 18px;
+			}
 		}
 
 		&.contact-email {
@@ -365,7 +383,7 @@
 
 		&.white {
 			color: #fff;
-			background-color: #262626;
+			background-color: #000;
 			border: 1px solid #fff;
 
 			&:hover {
@@ -389,8 +407,9 @@
 
 		@include for-680 {
 			min-width: unset;
+			margin-top: 70px;
 			width: 100%;
-			padding: 18px 64px;
+			padding: 0;
 			min-height: 48px;
 		}
 	}
@@ -433,7 +452,8 @@
 			&.white {
 				color: #FFFFFF;
 			}
-			@include for-680{
+
+			@include for-680 {
 				margin-bottom: 20px;
 			}
 		}
@@ -475,7 +495,8 @@
 					border: 1px solid #fff;
 				}
 			}
-			@include for-680{
+
+			@include for-680 {
 				margin-top: 20px;
 			}
 		}
@@ -559,6 +580,13 @@
 
 	&.popup--login {
 		background-color: #FFFFFF;
+
+		.popup__title {
+			@include for-550 {
+				display: flex;
+				justify-content: flex-start;
+			}
+		}
 	}
 
 	&.popup--reset {
@@ -571,11 +599,31 @@
 
 
 	&.popup--register {
-		background-color: #262626;
+		background-color: #000;
+
+		.popup__title {
+			@include for-550 {
+				display: flex;
+				justify-content: flex-start;
+			}
+		}
 	}
 
 	&.popup--contact {
 		background-color: #fff;
+
+		.popup__input {
+			margin-top: 40px;
+		}
+
+		.popup__title {
+			margin-top: 40px;
+		}
+
+		.popup__btn {
+			margin-top: 40px;
+		}
+
 	}
 
 	&.popup--email {
@@ -588,6 +636,12 @@
 		.popup__form {
 			align-self: flex-start;
 			margin-top: 140px;
+		}
+
+		.popup__btn {
+			@include for-800 {
+				margin-top: 40px;
+			}
 		}
 	}
 

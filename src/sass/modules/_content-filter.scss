@@ -44,7 +44,7 @@
 			color: #000;
 			text-transform: uppercase;
 			width: 100%;
-			@include for-992{
+			@include for-992 {
 				max-width: 170px;
 			}
 		}
@@ -62,20 +62,20 @@
 		left: 0;
 		padding: 19px 15px;
 		min-width: 240px;
-		height: 355px;
-		transform: translateY(-120%);
+		height: 0;
 		visibility: hidden;
 		transition: .3s;
 		opacity: 0;
 		z-index: -1;
 
 		&._active {
-			transform: translateY(0);
 			visibility: visible;
+			height: 355px;
 			opacity: 1;
 			z-index: 5;
 		}
-		@include for-992{
+
+		@include for-992 {
 			max-width: 220px;
 			min-width: 220px;
 		}
@@ -199,7 +199,8 @@
 		color: #fff;
 		transition: .3s;
 		border: 1px solid transparent;
-		&:hover{
+
+		&:hover {
 			border: 1px solid #000;
 			background-color: #fff;
 			color: #000;
@@ -214,33 +215,38 @@
 	&__filters-choose {
 		margin-top: 25px;
 		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		max-width: 240px;
 	}
 
-	&__filter-tick {
 
-		span {
-			font-family: 'FiraSansExtraCondensed-SemiBold', sans-serif;
-			font-weight: 600;
-			font-size: 21px;
-			line-height: 26px;
-			text-transform: uppercase;
+	&__filters-choose > div {
+		padding-right: 25px;
+		position: relative;
 
-			color: #000000;
-			margin-left: 10px;
+		font-family: 'FiraSansExtraCondensed-SemiBold', sans-serif;
+		font-weight: 600;
+		font-size: 21px;
+		line-height: 26px;
+		text-transform: uppercase;
+		color: #000000;
+		margin-left: 10px;
+		transition: .3s;
 
-			svg {
-				* {
-					transition: .3s;
-				}
-			}
+		&:after {
+			content: '';
+			position: absolute;
+			right: 0px;
+			top: 5px;
+			width: 15px;
+			height: 15px;
+			background-image: url("../img/ico/remove-filter-ico.svg");
 		}
 
 		&:hover {
-			svg {
-				path {
-					fill: #F20303;
-				}
-			}
+			color: #F20303;
+
 		}
 	}
 
@@ -258,13 +264,15 @@
 			background-color: #000;
 			transition: .3s;
 			border: 1px solid transparent;
-			&:hover{
+
+			&:hover {
 				color: #000;
 				background-color: #fff;
 				border: 1px solid #000;
 				cursor: pointer;
 			}
-			@include for-992{
+
+			@include for-992 {
 				min-width: 190px;
 			}
 		}

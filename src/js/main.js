@@ -496,5 +496,154 @@ window.onload = function () {
 
 	// tippy end
 
+	// filter functional start
+
+	let filterFields = document.querySelectorAll('.section-content__filter-input input');
+
+	filterFields.forEach(e => {
+		e.addEventListener('click', function () {
+			let filterList = e.closest('.section-content__filter').querySelector('.section-content__filter-list-wrapper');
+			let filterIciClose = e.closest('.section-content__filter').querySelector('.section-content__filter-ico');
+			filterList.classList.add('_active');
+			filterIciClose.classList.add('_active');
+		})
+	})
+
+
+	// document.addEventListener('click', function (e) {
+	// 	// console.log(document.querySelectorAll('.section-content__filter-list-wrapper'));
+	// 	if(e.target.closest('.section-content__filter-list-wrapper') === null){
+	// 		document.querySelectorAll('.section-content__filter-list-wrapper').forEach(e => {
+	// 			console.log(e.item(e));
+	// 			if(e.classList.contains('_active') === true){
+	// 				// e.classList.remove('_active')
+	// 			}
+	// 		})
+	// document.querySelectorAll('.section-content__filter-list-wrapper._active').classList.remove('_active')
+	// }
+	// if(e.target.closest('.section-content__filter') === null){
+	// 	let filterList = e.target.querySelector('.section-content__filter-list-wrapper');
+	// 	let filterIciClose = e.target.querySelector('.section-content__filter-ico');
+	//
+	// 	if(filterList.classList.contains('_active') && filterIciClose.classList.contains('_active') ) {
+	//
+	// 		filterList.classList.remove('_active')
+	// 		filterIciClose.classList.remove('_active')
+	// 	}
+	//
+	// } else {
+	// 	return false
+	// }
+	// })
+
+
+	let filterOptions = document.querySelectorAll('.js_filter_option');
+
+	filterOptions.forEach(e => {
+		e.addEventListener('change', function () {
+			if (e.querySelector('input').checked) {
+				let choseContainer = e.closest('.section-content__filter').querySelector('.section-content__filters-choose');
+				let chosenFilter = e.closest('.section-content__filter').querySelectorAll('.js_option_chosen');
+				let chosenCounter = e.closest('.section-content__filter').querySelector('.section-content__filter-counter');
+
+				let newOption = document.createElement('div');
+				let optionContent = e.querySelector('span').textContent;
+				newOption.classList.add('js_option_chosen');
+				newOption.setAttribute('data-option', optionContent);
+				newOption.innerText = optionContent;
+				choseContainer.appendChild(newOption);
+				addEventOnFilterItem(newOption)
+				if (chosenCounter) {
+					chosenCounter.textContent = "(" + (chosenFilter.length + 1) + ")";
+				}
+			}
+
+			if (!e.querySelector('input').checked) {
+				let chosenFilter = e.closest('.section-content__filter').querySelectorAll('.js_option_chosen');
+				let counterOption = e.closest('.section-content__filter').querySelector('.section-content__filter-counter');
+				chosenFilter.forEach(item => {
+
+					let itemAttr = item.getAttribute('data-option');
+					let elemAttr = e.getAttribute('data-option');
+
+					if (itemAttr === elemAttr) {
+						item.remove();
+					}
+					counterOption.textContent = "(" + (chosenFilter.length - 1) + ")";
+				})
+			}
+
+		});
+	})
+
+	function addEventOnFilterItem(elem) {
+		elem.addEventListener('click', function () {
+			let dataOption = elem.getAttribute('data-option')
+			filterOptions.forEach((item) => {
+
+				let itemDataOption = item.getAttribute('data-option');
+				if (dataOption === itemDataOption) {
+					item.querySelector('input').checked = false
+
+					let chosenFilter = elem.closest('.section-content__filter').querySelectorAll('.js_option_chosen');
+					let counterOption = elem.closest('.section-content__filter').querySelector('.section-content__filter-counter');
+					counterOption.textContent = "(" + (chosenFilter.length - 1) + ")";
+					elem.remove()
+				}
+			})
+		})
+	}
+
+	let filterSubmit = document.querySelectorAll('.section-content__filter-btn-submit');
+
+	filterSubmit.forEach(e => {
+		e.addEventListener('click', function () {
+			e.closest('.section-content__filter-list-wrapper').classList.remove('_active');
+		})
+	})
+
+	let optionDelete = document.querySelectorAll('.section-content__filter-btn-delete');
+
+	optionDelete.forEach(e => {
+		e.addEventListener('click', function () {
+
+			let choseContainer = e.closest('.section-content__filter').querySelector('.section-content__filters-choose');
+			choseContainer.innerHTML = '';
+
+			let currentFilterOption = e.closest('.section-content__filter').querySelectorAll('.js_filter_option');
+
+			currentFilterOption.forEach((item) => {
+				item.querySelector('input').checked = false;
+			})
+
+		})
+	})
+
+	let optionDeleteAll = document.querySelectorAll('.section-content__filter-rem-choose');
+
+	optionDeleteAll.forEach(e => {
+		e.addEventListener('click', function () {
+
+			let choseContainer = document.querySelectorAll('.section-content__filters-choose');
+			choseContainer.forEach(e => {
+				e.innerHTML = '';
+				optionCounter(e);
+			})
+			filterOptions.forEach((item) => {
+				item.querySelector('input').checked = false
+			})
+		})
+	})
+
+	function optionCounter(element) {
+		let allOption = element.closest('.section-content__filter').querySelectorAll('.js_option_chosen');
+		let optionCounter = element.closest('.section-content__filter').querySelector('.section-content__filter-counter');
+		let optionLength = allOption.length
+		if (optionCounter) {
+			optionCounter.textContent = "(" + (optionLength) + ")";
+		}
+	}
+
+	// filter functional end
 
 }

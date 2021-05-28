@@ -119,20 +119,17 @@
 		justify-content: space-between;
 		align-items: center;
 		margin-top: 40px;
-		transform: translateY(150%);
-		visibility: hidden;
+		//visibility: hidden;
 		background-color: #fff;
 
 		//transition: .5s;
-		//position: absolute;
-		//top: 80vh;
-		//left: 15px;
-		//right: 15px;
+		//position: relative;
+		//bottom: 40px;
 
-		&._active {
-			transform: translateY(0);
-			visibility: visible;
-		}
+		//&._active {
+		//	transform: translateY(0);
+		//	visibility: visible;
+		//}
 	}
 
 	&__filet-cansel-btn--mobile {
