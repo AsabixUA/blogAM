@@ -242,11 +242,19 @@
 			width: 15px;
 			height: 15px;
 			background-image: url("../img/ico/remove-filter-ico.svg");
+			background-repeat: no-repeat;
+			background-position: center;
+			transition: .3s;
 		}
 
 		&:hover {
 			color: #F20303;
 
+			&:after {
+				width: 15px;
+				height: 15px;
+				background-image: url("../img/ico/remove-filter-ico-red.svg");
+			}
 		}
 	}
 
