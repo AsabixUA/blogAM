@@ -858,7 +858,10 @@
 	}
 
 	&__content {
-		margin-bottom: 57px;
+		margin-bottom: 90px;
+		@include for-680{
+			margin-bottom: 0;
+		}
 	}
 
 	&__pagination {
@@ -964,12 +967,15 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
+		//margin-bottom: 65px;
 		//margin: 0 30px;
 		@include for-680 {
 			padding: 0;
 			//margin: 0 15px;
-			margin-bottom: 65px;
 			flex: 1 1 100%;
+		}
+			@include for-680{
+				margin-bottom: 65px;
 		}
 
 		&:hover > .section-dashboard__item-description h2 {
@@ -1503,6 +1509,9 @@
 	&__content {
 		margin: 0 auto;
 		margin-bottom: 90px;
+		@include for-680{
+			margin-bottom: 0;
+		}
 
 		&:last-child {
 			margin-bottom: 120px;
