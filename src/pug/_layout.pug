@@ -45,7 +45,7 @@ html(lang="ru")
 		link(rel='stylesheet', href='./css/libs/swiper-bundle.min.css?' + cacheFix)
 		link(rel='stylesheet', href='./css/libs/lightgallery-bundle.min.css?' + cacheFix)
 		//link(rel="stylesheet" href="")
-		link(rel='stylesheet', href='./css/main.css?' + cacheFix)
+		link(rel='stylesheet', href='./css/main.min.css?' + cacheFix)
 
 	body(class="page " + pageClass)
 		.page__wrapper
@@ -73,7 +73,13 @@ html(lang="ru")
 
 		block scripts
 			script(src='./js/libs/lazysizes.min.js')
-			script(src='./js/libs/swiper-bundle.min.js')
+			//script(src='./js/libs/swiper-bundle.min.js')
+			script.
+				setTimeout(function () {
+					let script = document.createElement('script');
+					script.src = './js/libs/swiper-bundle.min.js';
+					document.getElementsByTagName('head')[0].append(script);
+				}, 1500)
 			script(src='./js/libs/lightgallery.umd.min.js')
 			script(src='./js/libs/lg-thumbnail.umd.min.js')
 			script(src='./js/libs/lg-zoom.umd.min.js')
@@ -83,6 +89,14 @@ html(lang="ru")
 			script(src='./js/popper.min.js')
 			script(src='./js/tippy-bundle.umd.min.js')
 
-			script(src='./js/plur.js')
+			//script(src='./js/plur.js')
+
+			script.
+				setTimeout(function () {
+					let script = document.createElement('script');
+					script.src = './js/plur.js';
+					document.getElementsByTagName('head')[0].append(script);
+				}, 1500)
+
 			script(src='./js/validate-form.js')
 			script(src='./js/main.js?' + cacheFix)

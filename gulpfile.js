@@ -33,9 +33,9 @@ gulp.task('sass', () => {
 				cascade: true
 			}))
 			.pipe(cssImport())
+			.pipe(cssmin())
+			.pipe(rename({suffix: '.min'}))
 			.pipe(gulp.dest('dist/css/')) // upload the result to the desired folder
-			// .pipe(cssmin())
-			// .pipe(rename({suffix: '.min'}))
 			// .pipe(gulp.dest('dist/css/')) // upload the result to the desired folder
 			.pipe(browserSync.reload({stream: true})); // updating CSS on the page when changing
 });

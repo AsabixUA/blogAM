@@ -3,9 +3,35 @@
 // header start
 
 .header {
+	//position: fixed;
+	width: 100%;
+	background-color: #fff;
 	z-index: 100;
+	transition: .3s;
+	padding-top: 40px;
+
+	&.scroll {
+		//visibility: hidden;
+		//opacity: 0;
+		padding: 15px 0;
+
+		.header__logo {
+			max-width: 50px;
+		}
+	}
+
+	//&.visible {
+	//	visibility: visible;
+	//	opacity: 1;
+	//	padding: 15px 0;
+	//
+	//	.header__logo {
+	//		max-width: 50px;
+	//	}
+	//}
 
 	.container-fluid {
+		padding: 0;
 		@include for-800 {
 			width: 100%;
 			max-width: 100%;
@@ -15,7 +41,7 @@
 	&__inner {
 		display: flex;
 		justify-content: space-between;
-		padding: 40px 0 30px;
+		//padding: 40px 0 30px;
 		padding-bottom: 0;
 		@include for-750 {
 			padding: 16px 0;
@@ -49,6 +75,7 @@
 		z-index: 99;
 		max-width: 80px;
 		max-height: 80px;
+		transition: .3s;
 		@include for-800 {
 			max-width: 40px;
 			max-height: 40px;
@@ -75,7 +102,7 @@
 			//padding-right: 0;
 			//align-self: center;
 			padding-top: 5px !important;
-
+			padding-right: 0;
 		}
 
 		a {
@@ -859,7 +886,7 @@
 
 	&__content {
 		margin-bottom: 90px;
-		@include for-680{
+		@include for-680 {
 			margin-bottom: 0;
 		}
 	}
@@ -974,8 +1001,8 @@
 			//margin: 0 15px;
 			flex: 1 1 100%;
 		}
-			@include for-680{
-				margin-bottom: 65px;
+		@include for-680 {
+			margin-bottom: 65px;
 		}
 
 		&:hover > .section-dashboard__item-description h2 {
@@ -1509,7 +1536,7 @@
 	&__content {
 		margin: 0 auto;
 		margin-bottom: 90px;
-		@include for-680{
+		@include for-680 {
 			margin-bottom: 0;
 		}
 

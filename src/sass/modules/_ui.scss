@@ -180,6 +180,7 @@ body.disable-scroll {
 }
 
 .page__content {
+	//padding-top: 120px;
 	min-height: calc(100vh - (150px + 391px));
 
 	@include for-1100 {
@@ -508,7 +509,10 @@ body.disable-scroll {
 
 
 .move-up-btn-container {
-	position: absolute;
+	position: fixed;
+	visibility: hidden;
+	opacity: 0;
+	transition: .3s;
 	bottom: 33px; // calc(100vh - 63px);
 	right: -34px;
 	z-index: 99;
@@ -526,6 +530,10 @@ body.disable-scroll {
 		svg > * {
 			fill: #fff;
 		}
+	}
+	&.__active{
+		visibility: visible;
+		opacity: 1;
 	}
 }
 

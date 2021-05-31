@@ -2,6 +2,38 @@ window.onload = function () {
 	let bodyElement = document.querySelector('body');
 	//disable scroll body start
 
+	//window scroll start
+
+	let header = document.querySelector('.header'),
+			moveUpBtn = document.querySelector('.move-up-btn-container');
+
+	let windowHeight = window.innerHeight;
+
+	window.addEventListener('scroll', function () {
+		// if (window.pageYOffset > 150) {
+		// 	header.classList.add('scroll');
+		// } else {
+		// 	header.classList.remove('scroll');
+		// }
+
+		if (window.pageYOffset > windowHeight) {
+			moveUpBtn.classList.add('__active');
+		} else {
+			moveUpBtn.classList.remove('__active');
+		}
+	})
+
+	//move to top start
+
+	moveUpBtn.onclick = () => scrollTo({
+		top: 0,
+		behavior: "smooth",
+	})
+
+	//move to top end
+
+	//window scroll end
+
 	// active page start
 
 	let pageURL = window.location.href;
@@ -199,16 +231,18 @@ window.onload = function () {
 
 
 	//slider main page start
+	setTimeout(function () {
+		if (bodyElement.classList.contains('homepage')) {
+			const swiper = new Swiper('.swiper-container', {
+				spaceBetween: 70,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+			});
+		}
+	}, 1600)
 
-	if (bodyElement.classList.contains('homepage')) {
-		const swiper = new Swiper('.swiper-container', {
-			spaceBetween: 70,
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-		});
-	}
 	//slider main page end
 
 
@@ -228,17 +262,6 @@ window.onload = function () {
 	footerPartnerPlusBtn.onclick = function () {
 		this.nextElementSibling.classList.toggle('_active');
 	}
-
-	//move to top start
-
-	let moveUpBtn = document.querySelector('.move-up-btn');
-
-	moveUpBtn.onclick = () => scrollTo({
-		top: 0,
-		behavior: "smooth",
-	})
-
-	//move to top end
 
 	// footer end
 
@@ -484,14 +507,16 @@ window.onload = function () {
 
 		let tooltip = element.querySelector('.footer__partner-info');
 
-		tooltip.style.display = 'block';
+		setTimeout(function () {
+			tooltip.style.display = 'block';
 
-		tippy(element, {
-			maxWidth: 250,
-			content: tooltip,
-			allowHTML: true,
-			theme: 'light',
-		});
+			tippy(element, {
+				maxWidth: 250,
+				content: tooltip,
+				allowHTML: true,
+				theme: 'light',
+			});
+		}, 1600)
 	})
 
 	// tippy end
