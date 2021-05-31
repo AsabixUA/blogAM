@@ -1653,6 +1653,7 @@
 		color: #000000;
 		margin-bottom: 8px;
 		display: none;
+		padding: 0;
 		@include for-680 {
 			display: block;
 		}
@@ -1843,6 +1844,11 @@
 			font-weight: 700;
 		}
 	}
+
+	&__img{
+		margin-bottom: 40px;
+	}
+
 
 	&__img-container {
 		display: grid;
